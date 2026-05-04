@@ -9,7 +9,9 @@ const stats = [
 
 export default function StatsSection() {
   return (
-    <section className="relative bg-[#004B23] py-20 px-6 overflow-hidden">
+    /* Added 'pb-32' to give room for the curve and 'relative' */
+    <section className="relative bg-[#004B23] pt-20 pb-32 px-6 overflow-hidden ">
+      
       {/* Radial glow accents */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute top-0 left-[10%] w-80 h-80 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(181,228,140,0.08)_0%,transparent_70%)]" />
@@ -17,17 +19,14 @@ export default function StatsSection() {
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
-        {/* Section label */}
         <p className="text-center text-xs font-semibold uppercase tracking-[3px] text-[#B5E48C] mb-3 opacity-90">
           Our Impact
         </p>
 
-        {/* Heading */}
         <h2 className="text-center font-serif text-4xl md:text-5xl font-bold text-[#FCFBF7] mb-14 leading-tight">
           Accomplished with Feather Tech Institute
         </h2>
 
-        {/* Stat Cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((s, i) => (
             <div
@@ -46,6 +45,18 @@ export default function StatsSection() {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Curved Bottom SVG */}
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] transform rotate-180">
+        <svg 
+          viewBox="0 0 1200 120" 
+          preserveAspectRatio="none" 
+          className="relative block w-[calc(100%+1.3px)] h-[60px] fill-[#004B23]"
+          style={{ transform: 'rotateY(180deg)' }}
+        >
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V46.35C50.67,54.1,124,66.52,201.27,66.52,258.12,66.52,291,62,321.39,56.44Z"></path>
+        </svg>
       </div>
     </section>
   );

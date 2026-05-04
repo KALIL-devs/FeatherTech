@@ -6,7 +6,8 @@ import CourseCard from "@/components/courses/CourseCard";
 export default function CoursesSection() {
   const preview = courses.slice(0, 3);
   return (
-    <section style={{ backgroundColor: "#FCFBF7", padding: "88px 28px" }}>
+    <div className="bg-[#004B23]" suppressHydrationWarning>
+    <section style={{ backgroundColor: "#FCFBF7", padding: "88px 28px" }} className="rounded-t-[36px] rounded-b-[36px]">
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         {/* Header */}
         <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginBottom: "48px", flexWrap: "wrap", gap: "16px" }}>
@@ -47,5 +48,6 @@ export default function CoursesSection() {
 
       <style>{`@media(max-width:900px){#courses-preview-grid{grid-template-columns:repeat(2,1fr)!important;}}@media(max-width:600px){#courses-preview-grid{grid-template-columns:1fr!important;}}`}</style>
     </section>
+    </div>
   );
 }

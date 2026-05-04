@@ -35,7 +35,7 @@ export default function CoursesPage() {
         </section>
 
         {/* Filter Tabs */}
-        <div style={{ backgroundColor: "#FCFBF7", borderBottom: "1px solid #E8E4DC", position: "sticky", top: "68px", zIndex: 40 }}>
+        <div style={{ backgroundColor: "#FCFBF7", borderBottom: "1px solid #E8E4DC", top: "68px", zIndex: 40 }}>
           <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 28px", display: "flex", gap: "4px", overflowX: "auto" }}>
             {categories.map((cat) => (
               <button key={cat} onClick={() => setActive(cat)} style={{
@@ -64,7 +64,7 @@ export default function CoursesPage() {
         </section>
 
         {/* Fee Table */}
-        <section style={{ backgroundColor: "#F0EFE9", padding: "72px 28px" }}>
+        {/* <section style={{ backgroundColor: "#F0EFE9", padding: "72px 28px" }}>
           <div style={{ maxWidth: "900px", margin: "0 auto" }}>
             <p style={{ fontSize: "11.5px", letterSpacing: "2.5px", textTransform: "uppercase", color: "#004B23", marginBottom: "10px", fontWeight: 500 }}>Transparent Pricing</p>
             <h2 style={{
@@ -118,7 +118,7 @@ export default function CoursesPage() {
               * EMI options available. Contact us for scholarship details.
             </p>
           </div>
-        </section>
+        </section> */}
       </main>
       <Footer />
       <style>{`@media(max-width:900px){.courses-grid{grid-template-columns:repeat(2,1fr)!important;}}@media(max-width:600px){.courses-grid{grid-template-columns:1fr!important;}}`}</style>

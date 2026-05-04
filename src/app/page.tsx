@@ -6,7 +6,7 @@ import CoursesSection from "@/components/home/CoursesSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import FeaturesSection from "@/components/home/FeaturesSection";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
-import CourseOfferings from "@/components/home/CourseOfferings";
+import CourseOfferings from "@/components/home/ServicesOfferings";
 import FAQSection from '@/components/home/FAQSection';
 
 export default function Home() {
@@ -15,14 +15,18 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
-        <CourseOfferings />
-        <WhyChooseUs />
         <StatsSection />
+        <CoursesSection />
+        {/* <CourseOfferings />  */}
+
+        <WhyChooseUs />
+  
+
         <TestimonialsSection />
         <FAQSection />
 
-        {/* <CoursesSection />
-        <FeaturesSection /> */}
+
+        {/* <FeaturesSection /> */}
 
 
 
