@@ -26,7 +26,7 @@ const CourseOfferings = () => {
   ];
 
   return (
-    <section className="bg-[#004B23] py-20 px-6 overflow-hidden">
+    <section className="bg-[#1F3D2E] py-20 px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
@@ -34,17 +34,17 @@ const CourseOfferings = () => {
           <div className="max-w-xl">
             <div className="flex items-center gap-2 mb-3">
               <div className="flex -space-x-1">
-                <div className="w-3.5 h-3.5 rounded-full bg-[#B5E48C]" />
+                <div className="w-3.5 h-3.5 rounded-full bg-[#D2FF3A]" />
                 <div className="w-3.5 h-3.5 rounded-full bg-white/20" />
               </div>
-              <span className="text-xs font-semibold uppercase tracking-[3px] text-[#B5E48C]">Our Courses</span>
+              <span className="text-xs font-semibold uppercase tracking-[3px] text-[#D2FF3A]">Our Courses</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
               Empower Your Career <br /> with Tech Expertise
             </h2>
           </div>
 
-          <button className="self-start md:self-auto bg-white text-[#004B23] px-8 py-3 rounded-full text-sm font-bold flex items-center gap-2 hover:bg-[#B5E48C] transition-colors group">
+          <button className="self-start md:self-auto bg-white text-[#1F3D2E] px-8 py-3 rounded-full text-sm font-bold flex items-center gap-2 hover:bg-[#D2FF3A] transition-colors group">
             View All Courses
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </button>
@@ -56,7 +56,7 @@ const CourseOfferings = () => {
             <div
               key={idx}
               className={`rounded-[2.5rem] p-6 flex flex-col transition-transform hover:-translate-y-2 duration-300 ${course.highlight
-                ? 'bg-[#B5E48C] text-[#004B23]'
+                ? 'bg-[#D2FF3A] text-[#1F3D2E]'
                 : 'bg-white/5 border border-white/10 text-white'
                 }`}
             >
@@ -64,7 +64,7 @@ const CourseOfferings = () => {
                 <>
                   <div className="mb-8 px-2">
                     <h4 className="text-2xl font-bold mb-3">{course.title}</h4>
-                    <p className="opacity-75 text-sm leading-relaxed mb-6 border-t border-[#004B23]/10 pt-4">
+                    <p className="opacity-75 text-sm leading-relaxed mb-6 border-t border-[#1F3D2E]/10 pt-4">
                       {course.description}
                     </p>
                     <button className="flex items-center gap-2 font-bold text-sm group">
@@ -85,7 +85,7 @@ const CourseOfferings = () => {
                     <p className="text-white/60 text-sm leading-relaxed mb-6 border-t border-white/10 pt-4">
                       {course.description}
                     </p>
-                    <button className="flex items-center gap-2 text-[#B5E48C] font-bold text-sm group">
+                    <button className="flex items-center gap-2 text-[#D2FF3A] font-bold text-sm group">
                       Learn more <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </button>
                   </div>

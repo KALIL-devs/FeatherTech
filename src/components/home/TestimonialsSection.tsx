@@ -36,14 +36,14 @@ export default function TestimonialsSection() {
       <div className="max-w-6xl mx-auto">
 
         {/* Section label */}
-        <p className="text-center text-xs font-semibold uppercase tracking-[3px] text-[#004B23] mb-3">
+        <p className="text-center text-xs font-semibold uppercase tracking-[3px] text-[#1F3D2E] mb-3">
           Student Stories
         </p>
 
         {/* Heading */}
         <h2 className="text-center font-serif text-4xl md:text-5xl font-bold text-[#1A1A1A] mb-14 leading-tight">
           Voices of{" "}
-          <span className="text-[#004B23] italic">Success</span>
+          <span className="text-[#1F3D2E] italic">Success</span>
         </h2>
 
         {/* Cards */}
@@ -51,28 +51,28 @@ export default function TestimonialsSection() {
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className="bg-white rounded-2xl border border-[#E8E4DC] p-7 flex flex-col gap-5 shadow-[0_2px_20px_rgba(0,75,35,0.05)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,75,35,0.12)]"
+              className="bg-white rounded-2xl border border-[#E8E4DC] p-7 flex flex-col gap-5 shadow-[0_2px_20px_rgba(31,61,46,0.05)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(31,61,46,0.12)]"
             >
               {/* Stars */}
               <div className="flex gap-1">
                 {Array.from({ length: t.rating }).map((_, si) => (
-                  <span key={si} className="text-[#B5E48C] text-base">★</span>
+                  <span key={si} className="text-[#D2FF3A] text-base">★</span>
                 ))}
               </div>
 
               {/* Quote */}
-              <blockquote className="font-serif text-[15px] italic leading-[1.75] text-[#374151] border-l-[3px] border-[#B5E48C] pl-4 flex-1">
+              <blockquote className="font-serif text-[15px] italic leading-[1.75] text-[#374151] border-l-[3px] border-[#D2FF3A] pl-4 flex-1">
                 &ldquo;{t.quote}&rdquo;
               </blockquote>
 
               {/* Course tag */}
-              <span className="inline-block self-start px-3 py-1 rounded-full bg-[#B5E48C]/20 border border-[#004B23]/15 text-[11px] font-medium text-[#004B23]">
+              <span className="inline-block self-start px-3 py-1 rounded-full bg-[#D2FF3A]/20 border border-[#1F3D2E]/15 text-[11px] font-medium text-[#1F3D2E]">
                 {t.course}
               </span>
 
               {/* Person */}
               <div className="flex items-center gap-3">
-                <span className="w-10 h-10 rounded-full bg-[#004B23] text-[#B5E48C] flex items-center justify-center text-xs font-bold shrink-0">
+                <span className="w-10 h-10 rounded-full bg-[#1F3D2E] text-[#D2FF3A] flex items-center justify-center text-xs font-bold shrink-0">
                   {t.avatar}
                 </span>
                 <div>

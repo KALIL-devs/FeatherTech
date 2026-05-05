@@ -5,23 +5,23 @@ import { BookOpen, Users, Smartphone, Briefcase, Share2, Award } from 'lucide-re
 
 const FeaturesSection = () => {
   const features = [
-    { title: "High Demand Courses", icon: <BookOpen className="w-8 h-8 text-[#004B23]" /> },
-    { title: "Experienced Mentors", icon: <Users className="w-8 h-8 text-[#004B23]" /> },
-    { title: "More Learning Options", icon: <Smartphone className="w-8 h-8 text-[#004B23]" /> },
-    { title: "Career Support", icon: <Briefcase className="w-8 h-8 text-[#004B23]" /> },
-    { title: "Community Support", icon: <Share2 className="w-8 h-8 text-[#004B23]" /> },
-    { title: "Certification Programs", icon: <Award className="w-8 h-8 text-[#004B23]" /> },
+    { title: "High Demand Courses", icon: <BookOpen className="w-8 h-8 text-[#1F3D2E]" /> },
+    { title: "Experienced Mentors", icon: <Users className="w-8 h-8 text-[#1F3D2E]" /> },
+    { title: "More Learning Options", icon: <Smartphone className="w-8 h-8 text-[#1F3D2E]" /> },
+    { title: "Career Support", icon: <Briefcase className="w-8 h-8 text-[#1F3D2E]" /> },
+    { title: "Community Support", icon: <Share2 className="w-8 h-8 text-[#1F3D2E]" /> },
+    { title: "Certification Programs", icon: <Award className="w-8 h-8 text-[#1F3D2E]" /> },
   ];
 
   return (
-    <section className="relative bg-gradient-to-br from-[#004B23] via-[#003d1e] to-[#012b15] text-white py-20 px-6 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-[#1F3D2E] via-[#1a3326] to-[#142a1e] text-white py-20 px-6 overflow-hidden">
       {/* Decorative glow blobs */}
-      <div className="absolute top-0 -left-20 w-72 h-72 bg-[#B5E48C] rounded-full blur-[120px] opacity-20 pointer-events-none" />
-      <div className="absolute bottom-0 -right-20 w-72 h-72 bg-[#B5E48C] rounded-full blur-[120px] opacity-10 pointer-events-none" />
+      <div className="absolute top-0 -left-20 w-72 h-72 bg-[#D2FF3A] rounded-full blur-[120px] opacity-20 pointer-events-none" />
+      <div className="absolute bottom-0 -right-20 w-72 h-72 bg-[#D2FF3A] rounded-full blur-[120px] opacity-10 pointer-events-none" />
 
       <div className="max-w-6xl mx-auto text-center relative z-10">
         {/* Section label */}
-        <p className="text-xs font-semibold uppercase tracking-[3px] text-[#B5E48C] mb-3 opacity-90">
+        <p className="text-xs font-semibold uppercase tracking-[3px] text-[#D2FF3A] mb-3 opacity-90">
           What We Offer
         </p>
 
@@ -45,7 +45,7 @@ const FeaturesSection = () => {
               key={index}
               className="group bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-10 flex flex-col items-center justify-center shadow-xl transition-all duration-300 hover:bg-white/20 hover:scale-105 hover:shadow-2xl"
             >
-              <div className="bg-[#B5E48C] p-4 rounded-2xl mb-6 shadow-lg transition-transform duration-300 group-hover:rotate-6">
+              <div className="bg-[#D2FF3A] p-4 rounded-2xl mb-6 shadow-lg transition-transform duration-300 group-hover:rotate-6">
                 {feature.icon}
               </div>
               <h4 className="text-xl font-semibold text-white tracking-wide">

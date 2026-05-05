@@ -17,13 +17,13 @@ export default function FeeTable() {
       <div style={{ borderRadius: "14px", border: "1px solid #E8E4DC", overflow: "hidden" }}>
         <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "var(--font-inter), system-ui, sans-serif" }}>
           <thead>
-            <tr style={{ backgroundColor: "#004B23" }}>
+            <tr style={{ backgroundColor: "#1F3D2E" }}>
               {["Course", "Reference", "Date", "Amount", "Status"].map((h) => (
                 <th key={h} style={{
                   padding: "13px 18px", textAlign: "left",
                   fontSize: "10.5px", fontWeight: 600,
                   letterSpacing: "1px", textTransform: "uppercase",
-                  color: "#B5E48C",
+                  color: "#D2FF3A",
                 }}>{h}</th>
               ))}
             </tr>
@@ -39,16 +39,16 @@ export default function FeeTable() {
                 <td style={{ padding: "13px 18px", fontSize: "12.5px", color: "#6B7280" }}>
                   {new Date(p.date).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" })}
                 </td>
-                <td style={{ padding: "13px 18px", fontSize: "14px", fontWeight: 700, color: "#004B23" }}>
+                <td style={{ padding: "13px 18px", fontSize: "14px", fontWeight: 700, color: "#1F3D2E" }}>
                   ₹{p.amount.toLocaleString("en-IN")}
                 </td>
                 <td style={{ padding: "13px 18px" }}>
                   <span style={{
                     display: "inline-block", padding: "4px 12px", borderRadius: "99px",
                     fontSize: "11px", fontWeight: 600,
-                    backgroundColor: p.status === "Paid" ? "rgba(181,228,140,0.25)" : "rgba(251,191,36,0.18)",
-                    color: p.status === "Paid" ? "#004B23" : "#92400e",
-                    border: p.status === "Paid" ? "1px solid rgba(0,75,35,0.2)" : "1px solid rgba(251,191,36,0.3)",
+                    backgroundColor: p.status === "Paid" ? "rgba(210,255,58,0.25)" : "rgba(251,191,36,0.18)",
+                    color: p.status === "Paid" ? "#1F3D2E" : "#92400e",
+                    border: p.status === "Paid" ? "1px solid rgba(31,61,46,0.2)" : "1px solid rgba(251,191,36,0.3)",
                   }}>
                     {p.status === "Paid" ? "✓ " : "⏳ "}{p.status}
                   </span>
@@ -59,7 +59,7 @@ export default function FeeTable() {
           <tfoot>
             <tr style={{ backgroundColor: "#F0EFE9" }}>
               <td colSpan={3} style={{ padding: "12px 18px", fontSize: "12px", fontWeight: 600, color: "#6B7280", textAlign: "right" }}>Total Paid</td>
-              <td style={{ padding: "12px 18px", fontSize: "15px", fontWeight: 700, color: "#004B23" }}>
+              <td style={{ padding: "12px 18px", fontSize: "15px", fontWeight: 700, color: "#1F3D2E" }}>
                 ₹{payments.filter(p => p.status === "Paid").reduce((s, p) => s + p.amount, 0).toLocaleString("en-IN")}
               </td>
               <td />

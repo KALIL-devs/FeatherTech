@@ -20,7 +20,7 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer style={{ backgroundColor: "#004B23", color: "#FCFBF7" }}>
+    <footer style={{ backgroundColor: "#1F3D2E", color: "#FCFBF7" }}>
       <div style={{
         maxWidth: "1200px", margin: "0 auto",
         padding: "60px 28px 48px",
@@ -33,19 +33,19 @@ export default function Footer() {
           <Link href="/" style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none", marginBottom: "18px" }}>
             <span style={{
               width: "36px", height: "36px", borderRadius: "9px",
-              background: "rgba(181,228,140,0.15)",
-              border: "1px solid rgba(181,228,140,0.3)",
+              background: "rgba(210,255,58,0.15)",
+              border: "1px solid rgba(210,255,58,0.3)",
               display: "flex", alignItems: "center", justifyContent: "center",
             }}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                 <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5l6.74-6.76z"
-                  stroke="#B5E48C" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                <line x1="16" y1="8" x2="2" y2="22" stroke="#B5E48C" strokeWidth="1.8" strokeLinecap="round" />
+                  stroke="#D2FF3A" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                <line x1="16" y1="8" x2="2" y2="22" stroke="#D2FF3A" strokeWidth="1.8" strokeLinecap="round" />
               </svg>
             </span>
             <span style={{ display: "flex", flexDirection: "column", lineHeight: 1 }}>
               <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontWeight: 700, fontSize: "16px", color: "#FCFBF7" }}>FeatherTech</span>
-              <span style={{ fontFamily: "var(--font-inter), system-ui, sans-serif", fontSize: "9px", color: "#B5E48C", letterSpacing: "1.8px", textTransform: "uppercase" }}>Institute</span>
+              <span style={{ fontFamily: "var(--font-inter), system-ui, sans-serif", fontSize: "9px", color: "#D2FF3A", letterSpacing: "1.8px", textTransform: "uppercase" }}>Institute</span>
             </span>
           </Link>
           <p style={{ fontSize: "13.5px", color: "rgba(252,251,247,0.65)", lineHeight: 1.85, maxWidth: "280px", marginBottom: "24px" }}>
@@ -60,12 +60,12 @@ export default function Footer() {
             ].map((s) => (
               <a key={s.label} href={s.href} aria-label={s.label} style={{
                 width: "34px", height: "34px", borderRadius: "8px",
-                border: "1px solid rgba(181,228,140,0.25)",
+                border: "1px solid rgba(210,255,58,0.25)",
                 display: "flex", alignItems: "center", justifyContent: "center",
                 transition: "all 0.18s ease",
               }}
-                onMouseEnter={e => { e.currentTarget.style.backgroundColor = "rgba(181,228,140,0.15)"; e.currentTarget.style.borderColor = "#B5E48C"; }}
-                onMouseLeave={e => { e.currentTarget.style.backgroundColor = "transparent"; e.currentTarget.style.borderColor = "rgba(181,228,140,0.25)"; }}>
+                onMouseEnter={e => { e.currentTarget.style.backgroundColor = "rgba(210,255,58,0.15)"; e.currentTarget.style.borderColor = "#D2FF3A"; }}
+                onMouseLeave={e => { e.currentTarget.style.backgroundColor = "transparent"; e.currentTarget.style.borderColor = "rgba(210,255,58,0.25)"; }}>
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="rgba(252,251,247,0.7)"><path d={s.d} /></svg>
               </a>
             ))}
@@ -77,7 +77,7 @@ export default function Footer() {
           <div key={heading}>
             <h4 style={{
               fontFamily: "var(--font-playfair), Georgia, serif",
-              fontWeight: 600, fontSize: "14px", color: "#B5E48C",
+              fontWeight: 600, fontSize: "14px", color: "#D2FF3A",
               marginBottom: "18px",
             }}>{heading}</h4>
             <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: "10px" }}>
@@ -97,7 +97,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div style={{
-        borderTop: "1px solid rgba(181,228,140,0.15)",
+        borderTop: "1px solid rgba(210,255,58,0.15)",
         padding: "18px 28px",
         maxWidth: "1200px", margin: "0 auto",
         display: "flex", alignItems: "center", justifyContent: "space-between",

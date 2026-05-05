@@ -41,12 +41,12 @@ const FAQSection = () => {
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-2 mb-3">
             <div className="flex -space-x-1">
-              <div className="w-3.5 h-3.5 rounded-full bg-[#B5E48C]" />
-              <div className="w-3.5 h-3.5 rounded-full bg-[#004B23]" />
+              <div className="w-3.5 h-3.5 rounded-full bg-[#D2FF3A]" />
+              <div className="w-3.5 h-3.5 rounded-full bg-[#1F3D2E]" />
             </div>
-            <span className="text-xs font-semibold uppercase tracking-[3px] text-[#004B23]">Support</span>
+            <span className="text-xs font-semibold uppercase tracking-[3px] text-[#1F3D2E]">Support</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#004B23] mb-4 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#1F3D2E] mb-4 leading-tight">
             Frequently Asked Questions
           </h2>
           <p className="text-[#6B7280] text-[15px] leading-relaxed max-w-lg mx-auto">
@@ -60,8 +60,8 @@ const FAQSection = () => {
             <div
               key={index}
               className={`border rounded-2xl overflow-hidden transition-all duration-300 ${openIndex === index
-                ? 'border-[#B5E48C] bg-white shadow-md'
-                : 'border-[#E8E4DC] bg-white hover:border-[#B5E48C]/50'
+                ? 'border-[#D2FF3A] bg-white shadow-md'
+                : 'border-[#E8E4DC] bg-white hover:border-[#D2FF3A]/50'
                 }`}
             >
               <button
@@ -69,14 +69,14 @@ const FAQSection = () => {
                 className="w-full flex items-center justify-between px-6 py-5 text-left focus:outline-none"
               >
                 <div className="flex items-center gap-4">
-                  <div className={`p-2 rounded-lg transition-colors ${openIndex === index ? 'bg-[#B5E48C] text-[#004B23]' : 'bg-[#F0EFE9] text-[#6B7280]'}`}>
+                  <div className={`p-2 rounded-lg transition-colors ${openIndex === index ? 'bg-[#D2FF3A] text-[#1F3D2E]' : 'bg-[#F0EFE9] text-[#6B7280]'}`}>
                     <HelpCircle className="w-4 h-4" />
                   </div>
-                  <span className={`text-[15px] font-semibold ${openIndex === index ? 'text-[#004B23]' : 'text-[#1A1A1A]'}`}>
+                  <span className={`text-[15px] font-semibold ${openIndex === index ? 'text-[#1F3D2E]' : 'text-[#1A1A1A]'}`}>
                     {faq.question}
                   </span>
                 </div>
-                <ChevronDown className={`w-5 h-5 shrink-0 ml-4 text-[#6B7280] transition-transform duration-300 ${openIndex === index ? 'rotate-180 text-[#004B23]' : ''}`} />
+                <ChevronDown className={`w-5 h-5 shrink-0 ml-4 text-[#6B7280] transition-transform duration-300 ${openIndex === index ? 'rotate-180 text-[#1F3D2E]' : ''}`} />
               </button>
 
               <div className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
@@ -89,13 +89,13 @@ const FAQSection = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-12 text-center bg-[#004B23] rounded-[2rem] p-8 text-white relative overflow-hidden">
+        <div className="mt-12 text-center bg-[#1F3D2E] rounded-[2rem] p-8 text-white relative overflow-hidden">
           <div className="relative z-10">
             <h3 className="text-xl font-bold mb-2">Still have questions?</h3>
             <p className="text-white/70 text-[14px] mb-6">
               Can&apos;t find the answer you&apos;re looking for? Please chat to our friendly team.
             </p>
-            <button className="bg-[#B5E48C] text-[#004B23] px-8 py-3 rounded-full text-sm font-bold hover:bg-white transition-colors">
+            <button className="bg-[#D2FF3A] text-[#1F3D2E] px-8 py-3 rounded-full text-sm font-bold hover:bg-white transition-colors">
               Get in Touch
             </button>
           </div>

@@ -9,29 +9,29 @@ const WhyChooseUs = () => {
       title: "Certified Experts",
       description: "Our instructors hold industry certifications and bring real-world project experience to every session.",
       // Icon is now white to sit on the dark green background or green to sit on white
-      icon: <Users className="w-5 h-5 text-[#B5E48C]" />,
+      icon: <Users className="w-5 h-5 text-[#D2FF3A]" />,
     },
     {
       title: "Proven Results",
       description: "Hundreds of students have landed jobs and cracked competitive exams after training with us.",
-      icon: <ClipboardCheck className="w-5 h-5 text-[#B5E48C]" />,
+      icon: <ClipboardCheck className="w-5 h-5 text-[#D2FF3A]" />,
     },
     {
       title: "Award Winning",
       description: "Recognized as one of the top ed-tech institutes for curriculum quality and student outcomes.",
-      icon: <Trophy className="w-5 h-5 text-[#B5E48C]" />,
+      icon: <Trophy className="w-5 h-5 text-[#D2FF3A]" />,
     },
     {
       title: "Transparent Reporting",
       description: "Track your learning progress and milestones with detailed dashboards and mentor feedback.",
-      icon: <BarChart3 className="w-5 h-5 text-[#B5E48C]" />,
+      icon: <BarChart3 className="w-5 h-5 text-[#D2FF3A]" />,
     },
   ];
 
   return (
-    // Swapped: bg-white -> bg-[#004B23]
+    // Swapped: bg-white -> bg-[#1F3D2E]
     <div className="bg-[#F0EFE9]" suppressHydrationWarning>
-    <section className="bg-[#004B23] py-20 px-6 rounded-b-[36px]">
+    <section className="bg-[#1F3D2E] py-20 px-6 rounded-b-[36px]">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
@@ -40,10 +40,10 @@ const WhyChooseUs = () => {
             <div className="flex -space-x-1">
               {/* Swapped dot colors */}
               <div className="w-3.5 h-3.5 rounded-full bg-white" />
-              <div className="w-3.5 h-3.5 rounded-full bg-[#B5E48C]" />
+              <div className="w-3.5 h-3.5 rounded-full bg-[#D2FF3A]" />
             </div>
-            {/* Swapped: text-[#004B23] -> text-[#B5E48C] */}
-            <span className="text-xs font-semibold uppercase tracking-[3px] text-[#B5E48C]">Why Choose Us</span>
+            {/* Swapped: text-[#1F3D2E] -> text-[#D2FF3A] */}
+            <span className="text-xs font-semibold uppercase tracking-[3px] text-[#D2FF3A]">Why Choose Us</span>
           </div>
           {/* Swapped: text-[#1A1A1A] -> text-white */}
           <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight max-w-2xl">
@@ -64,7 +64,7 @@ const WhyChooseUs = () => {
                 className="absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute bottom-8 -left-3 bg-white p-2 rounded-full rotate-12 shadow-lg">
-                <Trophy className="w-5 h-5 text-[#004B23]" />
+                <Trophy className="w-5 h-5 text-[#1F3D2E]" />
               </div>
             </div>
 
@@ -78,27 +78,27 @@ const WhyChooseUs = () => {
               </div>
               {/* Swapped: bg-[#B5E48C] -> bg-white */}
               <div className="bg-white rounded-3xl flex-1 flex items-center justify-center relative overflow-hidden">
-                <div className="w-20 h-36 border-4 border-[#004B23]/10 rounded-full flex flex-col items-center justify-around py-4">
-                  <div className="w-2 h-2 rounded-full bg-[#004B23]" />
-                  <div className="w-full h-[2px] bg-[#004B23] rotate-12" />
-                  <div className="w-2 h-2 rounded-full bg-[#004B23]" />
-                  <div className="w-full h-[2px] bg-[#004B23] -rotate-12" />
-                  <div className="w-2 h-2 rounded-full bg-[#004B23]" />
+                <div className="w-20 h-36 border-4 border-[#1F3D2E]/10 rounded-full flex flex-col items-center justify-around py-4">
+                  <div className="w-2 h-2 rounded-full bg-[#1F3D2E]" />
+                  <div className="w-full h-[2px] bg-[#1F3D2E] rotate-12" />
+                  <div className="w-2 h-2 rounded-full bg-[#1F3D2E]" />
+                  <div className="w-full h-[2px] bg-[#1F3D2E] -rotate-12" />
+                  <div className="w-2 h-2 rounded-full bg-[#1F3D2E]" />
                 </div>
               </div>
             </div>
           </div>
 
           {/* Right: Feature Points */}
-          {/* Swapped: bg-[#004B23] -> bg-white */}
+          {/* Swapped: bg-[#1F3D2E] -> bg-white */}
           <div className="lg:col-span-7 bg-white rounded-[2rem] p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 shadow-2xl relative overflow-hidden">
             {/* Accent Blur: Adjusted to be light green instead of white for the white background */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#B5E48C]/20 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#D2FF3A]/20 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none" />
 
             {points.map((item, idx) => (
               <div key={idx} className="relative z-10 flex flex-col items-start">
-                {/* Swapped: bg-[#B5E48C] -> bg-[#004B23] */}
-                <div className="bg-[#004B23] p-3 rounded-xl mb-4 shadow-sm">
+                {/* Swapped: bg-[#B5E48C] -> bg-[#1F3D2E] */}
+                <div className="bg-[#1F3D2E] p-3 rounded-xl mb-4 shadow-sm">
                   {item.icon}
                 </div>
                 {/* Swapped: text-white -> text-[#1A1A1A] */}

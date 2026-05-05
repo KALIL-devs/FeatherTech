@@ -24,17 +24,17 @@ export default function AboutPage() {
       <Navbar />
       <main style={{ paddingTop: "20px" }}>
         {/* Hero */}
-        <section style={{ backgroundColor: "#004B23", padding: "88px 28px" }}>
+        <section style={{ backgroundColor: "#1F3D2E", padding: "88px 28px" }}>
           <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "60px", alignItems: "center" }}>
             <div>
-              <p style={{ fontSize: "11.5px", letterSpacing: "2.5px", textTransform: "uppercase", color: "#B5E48C", fontWeight: 500, marginBottom: "14px" }}>Who We Are</p>
+              <p style={{ fontSize: "11.5px", letterSpacing: "2.5px", textTransform: "uppercase", color: "#D2FF3A", fontWeight: 500, marginBottom: "14px" }}>Who We Are</p>
               <h1 style={{
                 fontFamily: "var(--font-playfair), Georgia, serif",
                 fontSize: "clamp(32px, 4.5vw, 52px)", fontWeight: 700,
                 color: "#FCFBF7", lineHeight: 1.1, letterSpacing: "-1px", marginBottom: "22px",
               }}>
                 Rooted in Knowledge,<br />
-                <span style={{ color: "#B5E48C", fontStyle: "italic" }}>Driven by Purpose.</span>
+                <span style={{ color: "#D2FF3A", fontStyle: "italic" }}>Driven by Purpose.</span>
               </h1>
               <p style={{ fontSize: "15px", color: "rgba(252,251,247,0.7)", lineHeight: 1.85, marginBottom: "32px", maxWidth: "440px" }}>
                 Founded in 2016, FeatherTech Institute has been a trusted destination for students seeking
@@ -42,7 +42,7 @@ export default function AboutPage() {
               </p>
               <Link href="/courses" style={{
                 display: "inline-block", padding: "12px 28px", borderRadius: "9px",
-                backgroundColor: "#B5E48C", color: "#004B23",
+                backgroundColor: "#D2FF3A", color: "#1F3D2E",
                 fontWeight: 600, fontSize: "14px", textDecoration: "none",
               }}>
                 Explore Our Courses
@@ -58,11 +58,11 @@ export default function AboutPage() {
                 { val: "92%", label: "Placement Rate" },
               ].map((s) => (
                 <div key={s.label} style={{
-                  backgroundColor: "rgba(181,228,140,0.08)",
-                  border: "1px solid rgba(181,228,140,0.2)",
+                  backgroundColor: "rgba(210,255,58,0.08)",
+                  border: "1px solid rgba(210,255,58,0.2)",
                   borderRadius: "14px", padding: "24px 20px",
                 }}>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "36px", fontWeight: 700, color: "#B5E48C", margin: "0 0 6px", lineHeight: 1 }}>{s.val}</p>
+                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "36px", fontWeight: 700, color: "#D2FF3A", margin: "0 0 6px", lineHeight: 1 }}>{s.val}</p>
                   <p style={{ fontSize: "12px", color: "rgba(252,251,247,0.6)" }}>{s.label}</p>
                 </div>
               ))}
@@ -73,7 +73,7 @@ export default function AboutPage() {
         {/* Mission */}
         <section style={{ backgroundColor: "#FCFBF7", padding: "88px 28px" }}>
           <div style={{ maxWidth: "780px", margin: "0 auto", textAlign: "center" }}>
-            <p style={{ fontSize: "11.5px", letterSpacing: "2.5px", textTransform: "uppercase", color: "#004B23", fontWeight: 500, marginBottom: "14px" }}>Our Mission</p>
+            <p style={{ fontSize: "11.5px", letterSpacing: "2.5px", textTransform: "uppercase", color: "#1F3D2E", fontWeight: 500, marginBottom: "14px" }}>Our Mission</p>
             <h2 style={{
               fontFamily: "var(--font-playfair), Georgia, serif",
               fontSize: "clamp(26px, 3.5vw, 38px)", fontWeight: 700, fontStyle: "italic",
@@ -90,7 +90,7 @@ export default function AboutPage() {
         {/* Values */}
         <section style={{ backgroundColor: "#F0EFE9", padding: "88px 28px" }}>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-            <p style={{ fontSize: "11.5px", letterSpacing: "2.5px", textTransform: "uppercase", color: "#004B23", fontWeight: 500, marginBottom: "10px" }}>Why Choose Us</p>
+            <p style={{ fontSize: "11.5px", letterSpacing: "2.5px", textTransform: "uppercase", color: "#1F3D2E", fontWeight: 500, marginBottom: "10px" }}>Why Choose Us</p>
             <h2 style={{
               fontFamily: "var(--font-playfair), Georgia, serif",
               fontSize: "clamp(26px, 3.5vw, 38px)", fontWeight: 700,
@@ -103,10 +103,10 @@ export default function AboutPage() {
                   border: "1px solid #E8E4DC", padding: "28px 24px",
                   transition: "all 0.22s ease",
                 }}
-                  onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 12px 40px rgba(0,75,35,0.1)"; (e.currentTarget as HTMLDivElement).style.transform = "translateY(-3px)"; }}
+                  onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 12px 40px rgba(31,61,46,0.1)"; (e.currentTarget as HTMLDivElement).style.transform = "translateY(-3px)"; }}
                   onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "none"; (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; }}>
                   <span style={{ fontSize: "28px", display: "block", marginBottom: "14px" }}>{v.icon}</span>
-                  <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "16px", fontWeight: 700, color: "#004B23", marginBottom: "10px" }}>{v.title}</h3>
+                  <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "16px", fontWeight: 700, color: "#1F3D2E", marginBottom: "10px" }}>{v.title}</h3>
                   <p style={{ fontSize: "13px", color: "#6B7280", lineHeight: 1.75 }}>{v.desc}</p>
                 </div>
               ))}
@@ -117,7 +117,7 @@ export default function AboutPage() {
         {/* Team */}
         <section style={{ backgroundColor: "#FCFBF7", padding: "88px 28px" }}>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-            <p style={{ fontSize: "11.5px", letterSpacing: "2.5px", textTransform: "uppercase", color: "#004B23", fontWeight: 500, marginBottom: "10px" }}>The People Behind It</p>
+            <p style={{ fontSize: "11.5px", letterSpacing: "2.5px", textTransform: "uppercase", color: "#1F3D2E", fontWeight: 500, marginBottom: "10px" }}>The People Behind It</p>
             <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(26px, 3.5vw, 38px)", fontWeight: 700, color: "#1A1A1A", marginBottom: "48px" }}>
               Our Faculty
             </h2>
@@ -129,12 +129,12 @@ export default function AboutPage() {
                 }}>
                   <div style={{
                     width: "68px", height: "68px", borderRadius: "50%",
-                    backgroundColor: "#004B23", margin: "0 auto 16px",
+                    backgroundColor: "#1F3D2E", margin: "0 auto 16px",
                     display: "flex", alignItems: "center", justifyContent: "center",
-                    fontWeight: 700, fontSize: "18px", color: "#B5E48C",
+                    fontWeight: 700, fontSize: "18px", color: "#D2FF3A",
                   }}>{member.avatar}</div>
                   <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "16px", fontWeight: 700, color: "#1A1A1A", marginBottom: "6px" }}>{member.name}</h3>
-                  <p style={{ fontSize: "12px", color: "#004B23", fontWeight: 500, marginBottom: "6px" }}>{member.role}</p>
+                  <p style={{ fontSize: "12px", color: "#1F3D2E", fontWeight: 500, marginBottom: "6px" }}>{member.role}</p>
                   <p style={{ fontSize: "11.5px", color: "#6B7280" }}>{member.expertise}</p>
                 </div>
               ))}

@@ -18,9 +18,9 @@ export default function CoursesPage() {
       <Navbar />
       <main style={{ paddingTop: "20px" }}>
         {/* Hero */}
-        <section style={{ backgroundColor: "#004B23", padding: "72px 28px 80px" }}>
+        <section style={{ backgroundColor: "#1F3D2E", padding: "72px 28px 80px" }}>
           <div style={{ maxWidth: "1200px", margin: "0 auto", textAlign: "center" }}>
-            <p style={{ fontSize: "11.5px", letterSpacing: "2.5px", textTransform: "uppercase", color: "#B5E48C", marginBottom: "12px", fontWeight: 500 }}>
+            <p style={{ fontSize: "11.5px", letterSpacing: "2.5px", textTransform: "uppercase", color: "#D2FF3A", marginBottom: "12px", fontWeight: 500 }}>
               Curriculum
             </p>
             <h1 style={{
@@ -29,7 +29,7 @@ export default function CoursesPage() {
               color: "#FCFBF7", letterSpacing: "-1px", lineHeight: 1.1,
             }}>
               Every Course,<br />
-              <span style={{ color: "#B5E48C", fontStyle: "italic" }}>Every Ambition.</span>
+              <span style={{ color: "#D2FF3A", fontStyle: "italic" }}>Every Ambition.</span>
             </h1>
           </div>
         </section>
@@ -41,9 +41,9 @@ export default function CoursesPage() {
               <button key={cat} onClick={() => setActive(cat)} style={{
                 padding: "14px 20px", borderRadius: 0, border: "none", cursor: "pointer",
                 whiteSpace: "nowrap", fontSize: "13px", fontWeight: active === cat ? 600 : 400,
-                color: active === cat ? "#004B23" : "#6B7280",
+                color: active === cat ? "#1F3D2E" : "#6B7280",
                 backgroundColor: "transparent",
-                borderBottom: active === cat ? "2.5px solid #004B23" : "2.5px solid transparent",
+                borderBottom: active === cat ? "2.5px solid #1F3D2E" : "2.5px solid transparent",
                 transition: "all 0.18s ease",
               }}>
                 {cat}
@@ -66,7 +66,7 @@ export default function CoursesPage() {
         {/* Fee Table */}
         {/* <section style={{ backgroundColor: "#F0EFE9", padding: "72px 28px" }}>
           <div style={{ maxWidth: "900px", margin: "0 auto" }}>
-            <p style={{ fontSize: "11.5px", letterSpacing: "2.5px", textTransform: "uppercase", color: "#004B23", marginBottom: "10px", fontWeight: 500 }}>Transparent Pricing</p>
+            <p style={{ fontSize: "11.5px", letterSpacing: "2.5px", textTransform: "uppercase", color: "#1F3D2E", marginBottom: "10px", fontWeight: 500 }}>Transparent Pricing</p>
             <h2 style={{
               fontFamily: "var(--font-playfair), Georgia, serif",
               fontSize: "clamp(26px, 3.5vw, 36px)", fontWeight: 700,
@@ -76,12 +76,12 @@ export default function CoursesPage() {
             <div style={{ borderRadius: "16px", border: "1px solid #E8E4DC", overflow: "hidden", backgroundColor: "#FFFFFF" }}>
               <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "var(--font-inter), system-ui, sans-serif" }}>
                 <thead>
-                  <tr style={{ backgroundColor: "#004B23" }}>
+                  <tr style={{ backgroundColor: "#1F3D2E" }}>
                     {["Course", "Category", "Duration", "Level", "Fee (INR)"].map((h) => (
                       <th key={h} style={{
                         padding: "14px 20px", textAlign: "left",
                         fontSize: "11px", fontWeight: 600, letterSpacing: "1px",
-                        textTransform: "uppercase", color: "#B5E48C",
+                        textTransform: "uppercase", color: "#D2FF3A",
                         borderBottom: "none",
                       }}>{h}</th>
                     ))}
@@ -94,7 +94,7 @@ export default function CoursesPage() {
                       borderBottom: "1px solid #F0EFE9",
                       transition: "background 0.15s",
                     }}
-                      onMouseEnter={e => { (e.currentTarget as HTMLTableRowElement).style.backgroundColor = "rgba(181,228,140,0.1)"; }}
+                      onMouseEnter={e => { (e.currentTarget as HTMLTableRowElement).style.backgroundColor = "rgba(210,255,58,0.1)"; }}
                       onMouseLeave={e => { (e.currentTarget as HTMLTableRowElement).style.backgroundColor = i % 2 === 0 ? "#FFFFFF" : "#FAFAF8"; }}>
                       <td style={{ padding: "14px 20px", fontSize: "13.5px", fontWeight: 500, color: "#1A1A1A" }}>{c.title}</td>
                       <td style={{ padding: "14px 20px", fontSize: "12.5px", color: "#6B7280" }}>{c.category}</td>
@@ -102,11 +102,11 @@ export default function CoursesPage() {
                       <td style={{ padding: "14px 20px" }}>
                         <span style={{
                           fontSize: "11px", padding: "3px 10px", borderRadius: "99px",
-                          backgroundColor: c.level === "Beginner" ? "rgba(181,228,140,0.25)" : c.level === "Intermediate" ? "rgba(251,191,36,0.2)" : "rgba(239,68,68,0.1)",
-                          color: c.level === "Beginner" ? "#004B23" : c.level === "Intermediate" ? "#92400e" : "#991b1b",
+                          backgroundColor: c.level === "Beginner" ? "rgba(210,255,58,0.25)" : c.level === "Intermediate" ? "rgba(251,191,36,0.2)" : "rgba(239,68,68,0.1)",
+                          color: c.level === "Beginner" ? "#1F3D2E" : c.level === "Intermediate" ? "#92400e" : "#991b1b",
                         }}>{c.level}</span>
                       </td>
-                      <td style={{ padding: "14px 20px", fontSize: "14px", fontWeight: 700, color: "#004B23" }}>
+                      <td style={{ padding: "14px 20px", fontSize: "14px", fontWeight: 700, color: "#1F3D2E" }}>
                         ₹{c.fee.toLocaleString("en-IN")}
                       </td>
                     </tr>

@@ -2,13 +2,13 @@ import Link from "next/link";
 import { Course } from "@/lib/courses";
 
 const badgeConfig = {
-  popular: { label: "⭐ Most Popular", bg: "#004B23", color: "#B5E48C" },
-  new:     { label: "✦ New Batch",    bg: "#B5E48C", color: "#004B23" },
+  popular: { label: "⭐ Most Popular", bg: "#1F3D2E", color: "#D2FF3A" },
+  new:     { label: "✦ New Batch",    bg: "#D2FF3A", color: "#1F3D2E" },
   hot:     { label: "🔥 In Demand",   bg: "#f59e0b", color: "#1c1100" },
 };
 
 const levelColor = {
-  Beginner:     { bg: "rgba(181,228,140,0.2)", color: "#004B23" },
+  Beginner:     { bg: "rgba(210,255,58,0.2)", color: "#1F3D2E" },
   Intermediate: { bg: "rgba(251,191,36,0.15)", color: "#92400e" },
   Advanced:     { bg: "rgba(239,68,68,0.1)",   color: "#991b1b" },
 };
@@ -25,18 +25,18 @@ export default function CourseCard({ course, featured = false }: Props) {
       borderRadius: "20px",
       border: "1px solid #E8E4DC",
       backgroundColor: "#FFFFFF",
-      boxShadow: "0 2px 16px rgba(0,75,35,0.06)",
+      boxShadow: "0 2px 16px rgba(31,61,46,0.06)",
       overflow: "hidden",
       transition: "all 0.25s ease",
       ...(featured ? { gridColumn: "span 2" } : {}),
     }}
       onMouseEnter={e => {
         (e.currentTarget as HTMLDivElement).style.transform = "translateY(-4px)";
-        (e.currentTarget as HTMLDivElement).style.boxShadow = "0 16px 48px rgba(0,75,35,0.13)";
+        (e.currentTarget as HTMLDivElement).style.boxShadow = "0 16px 48px rgba(31,61,46,0.13)";
       }}
       onMouseLeave={e => {
         (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
-        (e.currentTarget as HTMLDivElement).style.boxShadow = "0 2px 16px rgba(0,75,35,0.06)";
+        (e.currentTarget as HTMLDivElement).style.boxShadow = "0 2px 16px rgba(31,61,46,0.06)";
       }}>
 
       {/* Image / Gradient placeholder */}
@@ -75,7 +75,7 @@ export default function CourseCard({ course, featured = false }: Props) {
       {/* Body */}
       <div style={{ flex: 1, display: "flex", flexDirection: "column", padding: "18px 20px 0" }}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "8px" }}>
-          <p style={{ fontSize: "10px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "1px", color: "#004B23" }}>
+          <p style={{ fontSize: "10px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "1px", color: "#1F3D2E" }}>
             {course.category}
           </p>
           <span style={{
@@ -97,8 +97,8 @@ export default function CourseCard({ course, featured = false }: Props) {
             <span key={tag} style={{
               borderRadius: "99px", padding: "3px 10px",
               fontSize: "10px", color: "#374151",
-              backgroundColor: "rgba(0,75,35,0.06)",
-              border: "1px solid rgba(0,75,35,0.1)",
+              backgroundColor: "rgba(31,61,46,0.06)",
+              border: "1px solid rgba(31,61,46,0.1)",
             }}>{tag}</span>
           ))}
         </div>
@@ -110,7 +110,7 @@ export default function CourseCard({ course, featured = false }: Props) {
         borderTop: "1px solid #E8E4DC", padding: "12px 20px",
       }}>
         <div>
-          <p style={{ fontSize: "17px", fontWeight: 700, color: "#004B23", margin: 0 }}>
+          <p style={{ fontSize: "17px", fontWeight: 700, color: "#1F3D2E", margin: 0 }}>
             ₹{course.fee.toLocaleString("en-IN")}
           </p>
           <p style={{ fontSize: "10.5px", color: "#6B7280", margin: "2px 0 0" }}>
@@ -124,8 +124,8 @@ export default function CourseCard({ course, featured = false }: Props) {
           <Link href={`/courses/${course.id}`} style={{
             borderRadius: "9px", padding: "8px 18px",
             fontSize: "12px", fontWeight: 600, textDecoration: "none",
-            backgroundColor: course.featured ? "#B5E48C" : "#004B23",
-            color: course.featured ? "#004B23" : "#FCFBF7",
+            backgroundColor: course.featured ? "#D2FF3A" : "#1F3D2E",
+            color: course.featured ? "#1F3D2E" : "#FCFBF7",
             transition: "all 0.18s ease",
           }}
             onMouseEnter={e => { e.currentTarget.style.opacity = "0.85"; }}

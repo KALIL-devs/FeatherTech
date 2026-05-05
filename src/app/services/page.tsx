@@ -47,9 +47,9 @@ export default function ServicesPage() {
       <Navbar />
       <main style={{ paddingTop: "20px" }}>
         {/* Hero */}
-        <section style={{ backgroundColor: "#004B23", padding: "88px 28px", textAlign: "center" }}>
+        <section style={{ backgroundColor: "#1F3D2E", padding: "88px 28px", textAlign: "center" }}>
           <div style={{ maxWidth: "700px", margin: "0 auto" }}>
-            <p style={{ fontSize: "11.5px", letterSpacing: "2.5px", textTransform: "uppercase", color: "#B5E48C", fontWeight: 500, marginBottom: "14px" }}>
+            <p style={{ fontSize: "11.5px", letterSpacing: "2.5px", textTransform: "uppercase", color: "#D2FF3A", fontWeight: 500, marginBottom: "14px" }}>
               What We Offer
             </p>
             <h1 style={{
@@ -58,7 +58,7 @@ export default function ServicesPage() {
               color: "#FCFBF7", letterSpacing: "-1px", lineHeight: 1.1, marginBottom: "20px",
             }}>
               Services Built Around<br />
-              <span style={{ color: "#B5E48C", fontStyle: "italic" }}>Student Success</span>
+              <span style={{ color: "#D2FF3A", fontStyle: "italic" }}>Student Success</span>
             </h1>
             <p style={{ fontSize: "15px", color: "rgba(252,251,247,0.7)", lineHeight: 1.85 }}>
               From structured courses to placement support — every service at FeatherTech Institute is designed to help you go further, faster.
@@ -77,26 +77,26 @@ export default function ServicesPage() {
                   display: "flex", flexDirection: "column", gap: "16px",
                   transition: "all 0.22s ease",
                 }}
-                  onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 12px 40px rgba(0,75,35,0.1)"; (e.currentTarget as HTMLDivElement).style.transform = "translateY(-3px)"; }}
+                  onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 12px 40px rgba(31,61,46,0.1)"; (e.currentTarget as HTMLDivElement).style.transform = "translateY(-3px)"; }}
                   onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "none"; (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; }}>
                   <div style={{
                     width: "52px", height: "52px", borderRadius: "14px",
-                    backgroundColor: "rgba(181,228,140,0.2)",
-                    border: "1px solid rgba(0,75,35,0.1)",
+                    backgroundColor: "rgba(210,255,58,0.2)",
+                    border: "1px solid rgba(31,61,46,0.1)",
                     display: "flex", alignItems: "center", justifyContent: "center", fontSize: "24px",
                   }}>{s.icon}</div>
                   <div>
                     <h3 style={{
                       fontFamily: "var(--font-playfair), Georgia, serif",
-                      fontSize: "18px", fontWeight: 700, color: "#004B23", marginBottom: "10px",
+                      fontSize: "18px", fontWeight: 700, color: "#1F3D2E", marginBottom: "10px",
                     }}>{s.title}</h3>
                     <p style={{ fontSize: "13.5px", color: "#6B7280", lineHeight: 1.75 }}>{s.desc}</p>
                   </div>
                   <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "8px" }}>
                     {s.features.map((f) => (
                       <li key={f} style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13px", color: "#374151" }}>
-                        <span style={{ width: "18px", height: "18px", borderRadius: "50%", backgroundColor: "#B5E48C", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                          <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><polyline points="20,6 9,17 4,12" stroke="#004B23" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                        <span style={{ width: "18px", height: "18px", borderRadius: "50%", backgroundColor: "#D2FF3A", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                          <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><polyline points="20,6 9,17 4,12" stroke="#1F3D2E" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
                         </span>
                         {f}
                       </li>
@@ -118,10 +118,10 @@ export default function ServicesPage() {
               Explore our courses or reach out to an advisor — we&apos;ll help you find the right path.
             </p>
             <div style={{ display: "flex", justifyContent: "center", gap: "12px", flexWrap: "wrap" }}>
-              <a href="/courses" style={{ padding: "13px 30px", borderRadius: "9px", backgroundColor: "#B5E48C", color: "#004B23", fontWeight: 600, fontSize: "14px", textDecoration: "none" }}>
+              <a href="/courses" style={{ padding: "13px 30px", borderRadius: "9px", backgroundColor: "#D2FF3A", color: "#1F3D2E", fontWeight: 600, fontSize: "14px", textDecoration: "none" }}>
                 Explore Courses
               </a>
-              <a href="/contact" style={{ padding: "13px 30px", borderRadius: "9px", border: "1.5px solid #004B23", color: "#004B23", fontWeight: 500, fontSize: "14px", textDecoration: "none" }}>
+              <a href="/contact" style={{ padding: "13px 30px", borderRadius: "9px", border: "1.5px solid #1F3D2E", color: "#1F3D2E", fontWeight: 500, fontSize: "14px", textDecoration: "none" }}>
                 Talk to an Advisor
               </a>
             </div>

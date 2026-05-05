@@ -28,7 +28,7 @@ export default function CourseProgress() {
               </div>
               <span style={{
                 fontFamily: "var(--font-inter), system-ui, sans-serif",
-                fontSize: "22px", fontWeight: 700, color: "#004B23",
+                fontSize: "22px", fontWeight: 700, color: "#1F3D2E",
               }}>{c.progress}%</span>
             </div>
 
@@ -37,14 +37,14 @@ export default function CourseProgress() {
               <div style={{
                 height: "100%", borderRadius: "99px",
                 width: `${c.progress}%`,
-                background: "linear-gradient(90deg, #004B23, #B5E48C)",
+                background: "linear-gradient(90deg, #1F3D2E, #D2FF3A)",
                 transition: "width 1s ease",
               }} />
             </div>
 
             <div style={{ display: "flex", justifyContent: "space-between", marginTop: "10px" }}>
               <span style={{ fontSize: "11.5px", color: "#6B7280" }}>{c.done} of {c.total} lectures completed</span>
-              <span style={{ fontSize: "11.5px", color: c.progress >= 100 ? "#004B23" : "#6B7280", fontWeight: c.progress >= 100 ? 600 : 400 }}>
+              <span style={{ fontSize: "11.5px", color: c.progress >= 100 ? "#1F3D2E" : "#6B7280", fontWeight: c.progress >= 100 ? 600 : 400 }}>
                 {c.progress >= 100 ? "✓ Completed" : `${c.total - c.done} remaining`}
               </span>
             </div>

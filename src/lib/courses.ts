@@ -35,7 +35,7 @@ export const courses: Course[] = [
     description:
       "Master React, Node.js, and PostgreSQL to build production-grade applications from front to back.",
     image: "",
-    gradient: "linear-gradient(135deg, #004B23 0%, #006B34 50%, #B5E48C 100%)",
+    gradient: "linear-gradient(135deg, #1F3D2E 0%, #2A5140 50%, #D2FF3A 100%)",
     badge: "popular",
     tags: ["React", "Node.js", "PostgreSQL", "REST API"],
     duration: "6 Months",
@@ -52,7 +52,7 @@ export const courses: Course[] = [
     description:
       "From Python fundamentals to machine learning pipelines and data visualisation — the complete path.",
     image: "",
-    gradient: "linear-gradient(135deg, #1a3a4a 0%, #2d6a8f 50%, #B5E48C 100%)",
+    gradient: "linear-gradient(135deg, #1a3a4a 0%, #2d6a8f 50%, #D2FF3A 100%)",
     badge: "new",
     tags: ["Python", "Pandas", "Scikit-Learn", "Matplotlib"],
     duration: "4 Months",
@@ -120,7 +120,7 @@ export const courses: Course[] = [
     description:
       "SBI, IBPS, and RRB exam prep with quantitative aptitude, reasoning, English, and GK modules.",
     image: "",
-    gradient: "linear-gradient(135deg, #004B23 0%, #005f2e 50%, #78c87e 100%)",
+    gradient: "linear-gradient(135deg, #1F3D2E 0%, #2A5140 50%, #D2FF3A 100%)",
     badge: "popular",
     tags: ["Quant", "Reasoning", "English", "GK"],
     duration: "5 Months",
