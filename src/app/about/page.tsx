@@ -21,9 +21,9 @@ const services = [
 ];
 
 const leadership = [
-  { name: "Atchaya Priya.G", role: "CEO",               avatar: "AP", image: "/images/team/atchaya-priya.jpg" },
+  // { name: "Atchaya Priya.G", role: "CEO",               avatar: "AP", image: "/images/team/atchaya-priya.jpg" },
   { name: "Udhaya Raj.P",    role: "Managing Director",  avatar: "UR", image: "/images/team/udhaya-raj.jpg"    },
-  { name: "Tamizhamuthan.G", role: "Director",           avatar: "TG", image: "/images/team/tamizhamuthan.jpg" },
+  // { name: "Tamizhamuthan.G", role: "Director",           avatar: "TG", image: "/images/team/tamizhamuthan.jpg" },
 ];
 
 // ─── Reusable placeholder ─────────────────────────────────────────────────────
@@ -266,7 +266,7 @@ export default function AboutPage() {
               fontSize: "clamp(26px, 3.5vw, 38px)", fontWeight: 700,
               color: "#1A1A1A", marginBottom: "48px",
             }}>
-              The Minds Behind Feather Tech
+              The Mind Behind Feather Tech
             </h2>
 
             <div className="team-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "28px", maxWidth: "860px" }}>
