@@ -22,7 +22,7 @@ const services = [
 
 const leadership = [
   // { name: "Atchaya Priya.G", role: "CEO",               avatar: "AP", image: "/images/team/atchaya-priya.jpg" },
-  { name: "Udhaya Raj.P",    role: "Managing Director",  avatar: "UR", image: "/images/team/udhaya-raj.jpg"    },
+  { name: "Udhaya Raj.P",    role: "Managing Director",  avatar: "UR", image: "/about/team/udhaya-raj.png"},
   // { name: "Tamizhamuthan.G", role: "Director",           avatar: "TG", image: "/images/team/tamizhamuthan.jpg" },
 ];
 
@@ -178,82 +178,57 @@ export default function AboutPage() {
         </section> */}
 
         {/* ── Our Services ─────────────────────────────────────────────────── */}
-        <section style={{ backgroundColor: "#F0EFE9", padding: "88px 28px" }}>
-          <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-            <p style={{ fontSize: "11.5px", letterSpacing: "2.5px", textTransform: "uppercase", color: "#1F3D2E", fontWeight: 500, marginBottom: "10px" }}>
-              Our Services
-            </p>
-            <h2 style={{
-              fontFamily: "var(--font-playfair), Georgia, serif",
-              fontSize: "clamp(26px, 3.5vw, 38px)", fontWeight: 700,
-              color: "#1A1A1A", marginBottom: "48px",
-            }}>
-              Two Pillars of What We Do
-            </h2>
+<section className="bg-paper-dark py-24 px-7">
+  <div className="max-w-[1200px] mx-auto">
+    <p className="text-[11.5px] tracking-[2.5px] uppercase text-scholar-green font-medium mb-2.5">
+      Our Services
+    </p>
+    <h2 className="font-serif text-3xl md:text-4xl lg:text-[38px] font-bold text-ink mb-12">
+      Two Pillars of What We Do
+    </h2>
 
-            <div className="services-about-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }}>
-              {services.map((s, i) => (
-                <div
-                  key={s.title}
-                  style={{
-                    backgroundColor: "#FFFFFF", borderRadius: "20px",
-                    border: "1px solid #E8E4DC", overflow: "hidden",
-                    display: "flex", flexDirection: "column",
-                    transition: "all 0.22s ease",
-                  }}
-                  onMouseEnter={e => {
-                    (e.currentTarget as HTMLDivElement).style.boxShadow = "0 12px 40px rgba(31,61,46,0.1)";
-                    (e.currentTarget as HTMLDivElement).style.transform = "translateY(-3px)";
-                  }}
-                  onMouseLeave={e => {
-                    (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
-                    (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
-                  }}
-                >
-                  {/* Service image */}
-                  <div style={{ height: "200px", overflow: "hidden", flexShrink: 0 }}>
-                    {/* ↓ PLACEHOLDER */}
-                    <ImgPlaceholder
-                      path={s.image}
-                      label={i === 0 ? "Digital Service" : "Learning Hub"}
-                      height="200px"
-                      bg={i === 0 ? "#D0DCF0" : "#D4E8D0"}
-                    />
-                    {/* ↑ PLACEHOLDER ends */}
-
-                    {/* ↓ REAL IMAGE — uncomment when ready
-                    <img src={s.image} alt={s.title} style={{ width:"100%", height:"100%", objectFit:"cover", display:"block" }} />
-                    */}
-                  </div>
-
-                  <div style={{ padding: "28px 28px 32px", display: "flex", flexDirection: "column", gap: "14px", flex: 1 }}>
-                    <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "19px", fontWeight: 700, color: "#1F3D2E", margin: 0 }}>
-                      {s.title}
-                    </h3>
-                    <p style={{ fontSize: "14px", color: "#6B7280", lineHeight: 1.8, margin: 0 }}>
-                      {s.desc}
-                    </p>
-                    <Link
-                      href="/services"
-                      style={{
-                        marginTop: "auto",
-                        display: "inline-flex", alignItems: "center", gap: "6px",
-                        fontSize: "13px", fontWeight: 600, color: "#1F3D2E",
-                        textDecoration: "none", paddingTop: "12px",
-                        borderTop: "1px solid #F0EFE9",
-                        transition: "gap 0.18s ease",
-                      }}
-                      onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.gap = "10px"; }}
-                      onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.gap = "6px"; }}
-                    >
-                      Show More <span style={{ fontSize: "15px" }}>→</span>
-                    </Link>
-                  </div>
-                </div>
-              ))}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {services.map((s, i) => (
+        <div
+          key={s.title}
+          className="group relative bg-white rounded-[20px] border border-border overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-scholar-green/10"
+        >
+          {/* Abstract Icon/Number Background instead of Image */}
+          <div className="h-40 relative flex items-center justify-center overflow-hidden bg-paper">
+            {/* Large background number for visual depth */}
+            <span className="absolute -bottom-10 -right-4 text-[160px] font-serif font-black text-scholar-green/5 select-none">
+              0{i + 1}
+            </span>
+            
+            {/* Stylized Icon */}
+            <div className="relative z-10 w-16 h-16 rounded-2xl bg-mint/20 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-300">
+              {i === 0 ? "⚡" : "📚"}
             </div>
+            
+            {/* Decorative line */}
+            <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-mint group-hover:w-full transition-all duration-500" />
           </div>
-        </section>
+
+          <div className="p-7 md:p-8 flex flex-col gap-3.5 flex-1">
+            <h3 className="font-serif text-[22px] font-bold text-scholar-green m-0">
+              {s.title}
+            </h3>
+            <p className="text-sm text-muted leading-relaxed m-0">
+              {s.desc}
+            </p>
+            
+            <Link
+              href="/services"
+              className="mt-auto inline-flex items-center gap-1.5 text-[13px] font-bold text-scholar-green no-underline pt-3 border-t border-paper-dark transition-all duration-200 hover:gap-2.5"
+            >
+              Learn More <span className="text-lg">→</span>
+            </Link>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
         {/* ── Leadership ───────────────────────────────────────────────────── */}
         <section style={{ backgroundColor: "#FCFBF7", padding: "88px 28px" }}>
@@ -267,7 +242,7 @@ export default function AboutPage() {
               color: "#1A1A1A", marginBottom: "48px",
             }}>
               The Mind Behind Feather Tech
-            </h2>
+            </h2> 
 
             <div className="team-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "28px", maxWidth: "860px" }}>
               {leadership.map((member, i) => {
@@ -295,21 +270,21 @@ export default function AboutPage() {
                     {/* Photo area */}
                     <div style={{ position: "relative", height: "220px", overflow: "hidden" }}>
                       {/* ↓ PLACEHOLDER */}
-                      <ImgPlaceholder
+                      {/* <ImgPlaceholder
                         path={member.image}
                         label={member.name}
                         height="220px"
                         bg={palettes[i]}
-                      />
+                      /> */}
                       {/* ↑ PLACEHOLDER ends */}
 
-                      {/* ↓ REAL IMAGE — uncomment when ready
+                      {/* ↓ REAL IMAGE — uncomment when ready */}
                       <img
                         src={member.image}
                         alt={member.name}
                         style={{ width:"100%", height:"100%", objectFit:"cover", objectPosition:"top", display:"block" }}
                       />
-                      */}
+                      {/* */}
 
                       {/* Role badge overlaid on image bottom */}
                       <div style={{

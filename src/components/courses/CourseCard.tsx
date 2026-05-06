@@ -121,7 +121,7 @@ export default function CourseCard({ course, featured = false }: Props) {
           {course.weekendBatch && (
             <span style={{ fontSize: "10px", color: "#6B7280", alignSelf: "center" }}>📅 Weekend</span>
           )}
-          <Link href={`/courses/${course.id}`} style={{
+          <Link href={`/contact`} style={{
             borderRadius: "9px", padding: "8px 18px",
             fontSize: "12px", fontWeight: 600, textDecoration: "none",
             backgroundColor: course.featured ? "#1F3D2E" : "#1F3D2E",

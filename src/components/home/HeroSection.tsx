@@ -16,20 +16,20 @@ export default function HeroSection() {
         {/* 1. TOP HALF: Text Content (50% Height) */}
         <div className="relative z-20 flex h-[40vh] flex-col items-center justify-center px-6 text-center">
           {/* Decorative Flowers - Positioned relative to text block */}
-          <div className="absolute left-[10%] top-1/4 animate-[float_5s_ease-in-out_infinite] hidden md:flex h-10 w-10 items-center justify-center rounded-xl bg-[#C8F135] shadow-sm">
+          <div className="absolute left-[10%] top-1/4 animate-float hidden md:flex h-10 w-10 items-center justify-center rounded-xl bg-[#C8F135] shadow-sm">
             <span className="text-[#1F3D2E] text-xl font-bold">＊</span>
           </div>
-          <div className="absolute right-[10%] top-1/3 animate-[float_5s_ease-in-out_1.5s_infinite] hidden md:flex h-10 w-10 items-center justify-center rounded-xl bg-[#C8F135] shadow-sm">
+          <div className="absolute right-[10%] top-1/3 animate-float hidden md:flex h-10 w-10 items-center justify-center rounded-xl bg-[#C8F135] shadow-sm">
             <span className="text-[#1F3D2E] text-xl font-bold">＊</span>
           </div>
 
-          <h1 className="font-serif font-medium leading-[1.1] tracking-tight text-[#1F3D2E] text-4xl sm:text-5xl lg:text-6xl animate-[fadeUp_0.8s_ease-out_both]">
+          <h1 className="font-serif font-medium leading-[1.1] tracking-tight text-[#1F3D2E] text-4xl sm:text-5xl lg:text-6xl animate-fade-up">
             Empowering Students
             <br />
             Through <span className="italic underline decoration-[#C8F135] decoration-4 underline-offset-4">Expert</span> Learning
           </h1>
 
-          <p className="mt-4 max-w-md md:max-w-xl text-[#1F3D2E]/70 text-sm md:text-base font-light leading-relaxed animate-[fadeUp_0.8s_0.2s_ease-out_both]">
+          <p className="mt-4 max-w-md md:max-w-xl text-[#1F3D2E]/70 text-sm md:text-base font-light leading-relaxed animate-fade-up">
             Master high-demand skills and bridge the gap from learning to earning with Feathertech Institute.
           </p>
         </div>
@@ -38,7 +38,7 @@ export default function HeroSection() {
         <div className="relative flex h-[32vh] w-full flex-col items-center justify-end mt-25">
           
           {/* Stats - Floating slightly higher to stay in view */}
-          <div className="hidden lg:flex absolute left-[5%] xl:left-[12%] bottom-[30%] z-30 animate-[fadeUp_0.8s_0.4s_ease-out_both]">
+          <div className="hidden lg:flex absolute left-[5%] xl:left-[12%] bottom-[30%] z-30 animate-fade-up">
             <div className="flex items-center gap-3 rounded-2xl bg-white p-4 shadow-xl border border-gray-100">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#C8F135] text-lg">🎓</div>
               <div>
@@ -48,7 +48,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="hidden lg:flex absolute right-[5%] xl:right-[12%] bottom-[30%] z-30 animate-[fadeUp_0.8s_0.5s_ease-out_both]">
+          <div className="hidden lg:flex absolute right-[5%] xl:right-[12%] bottom-[30%] z-30 animate-fade-up">
             <div className="flex flex-col items-start rounded-2xl bg-white p-4 shadow-xl border border-gray-100">
               <div className="flex gap-0.5 mb-1 text-[#C8F135] text-xs">★★★★★</div>
               <p className="text-xl font-bold text-[#1F3D2E]">8+ Years</p>
@@ -72,7 +72,7 @@ export default function HeroSection() {
           </div>
 
           {/* Fixed Bottom CTA Bar - Positioned to end exactly with the display */}
-          <div className="absolute bottom-6 z-40 flex items-center gap-1 rounded-full bg-white/90 p-1.5 shadow-2xl backdrop-blur-md border border-white animate-[fadeUp_0.8s_0.7s_ease-out_both]">
+          <div className="absolute bottom-6 z-40 flex items-center gap-1 rounded-full bg-white/90 p-1.5 shadow-2xl backdrop-blur-md border border-white animate-fade-up">
             <Link href="/courses" className="rounded-full bg-[#C8F135] px-8 py-3 text-sm font-bold text-[#1F3D2E] transition-all hover:scale-105">
               Explore Courses
             </Link>
@@ -84,7 +84,7 @@ export default function HeroSection() {
 
       </section>
 
-      <style jsx global>{`
+      {/* <style jsx global>{`
         @keyframes float {
           0%, 100% { transform: translateY(0px) rotate(0deg); }
           50% { transform: translateY(-15px) rotate(5deg); }
@@ -93,7 +93,7 @@ export default function HeroSection() {
           from { opacity: 0; transform: translateY(20px); }
           to { opacity: 1; transform: translateY(0); }
         }
-      `}</style>
+      `}</style> */}
     </div>
   );
 }

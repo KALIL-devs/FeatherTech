@@ -212,7 +212,7 @@ function InlineCourseCard({ course }: { course: Course }) {
 
         {/* CTA */}
         <a
-          href={`/courses/${course.id}`}
+          href={`/contact`}
           style={{
             display: "block", textAlign: "center",
             padding: "12px", borderRadius: "10px",
