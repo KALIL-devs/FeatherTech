@@ -41,7 +41,7 @@ const FAQSection = () => {
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-2 mb-3">
             <div className="flex -space-x-1">
-              <div className="w-3.5 h-3.5 rounded-full bg-[#D2FF3A]" />
+              <div className="w-3.5 h-3.5 rounded-full bg-[#C8F135]" />
               <div className="w-3.5 h-3.5 rounded-full bg-[#1F3D2E]" />
             </div>
             <span className="text-xs font-semibold uppercase tracking-[3px] text-[#1F3D2E]">Support</span>
@@ -60,8 +60,8 @@ const FAQSection = () => {
             <div
               key={index}
               className={`border rounded-2xl overflow-hidden transition-all duration-300 ${openIndex === index
-                ? 'border-[#D2FF3A] bg-white shadow-md'
-                : 'border-[#E8E4DC] bg-white hover:border-[#D2FF3A]/50'
+                ? 'border-[#C8F135] bg-white shadow-md'
+                : 'border-[#E8E4DC] bg-white hover:border-[#C8F135]/50'
                 }`}
             >
               <button
@@ -69,7 +69,7 @@ const FAQSection = () => {
                 className="w-full flex items-center justify-between px-6 py-5 text-left focus:outline-none"
               >
                 <div className="flex items-center gap-4">
-                  <div className={`p-2 rounded-lg transition-colors ${openIndex === index ? 'bg-[#D2FF3A] text-[#1F3D2E]' : 'bg-[#F0EFE9] text-[#6B7280]'}`}>
+                  <div className={`p-2 rounded-lg transition-colors ${openIndex === index ? 'bg-[#C8F135] text-[#1F3D2E]' : 'bg-[#F0EFE9] text-[#6B7280]'}`}>
                     <HelpCircle className="w-4 h-4" />
                   </div>
                   <span className={`text-[15px] font-semibold ${openIndex === index ? 'text-[#1F3D2E]' : 'text-[#1A1A1A]'}`}>
@@ -95,7 +95,7 @@ const FAQSection = () => {
             <p className="text-white/70 text-[14px] mb-6">
               Can&apos;t find the answer you&apos;re looking for? Please chat to our friendly team.
             </p>
-            <button className="bg-[#D2FF3A] text-[#1F3D2E] px-8 py-3 rounded-full text-sm font-bold hover:bg-white transition-colors">
+            <button className="bg-[#C8F135] text-[#1F3D2E] px-8 py-3 rounded-full text-sm font-bold hover:bg-white transition-colors">
               Get in Touch
             </button>
           </div>

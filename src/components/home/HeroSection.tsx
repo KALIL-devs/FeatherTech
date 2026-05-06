@@ -5,91 +5,95 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <div className="bg-[#1F3D2E]" suppressHydrationWarning>
-      <section className="relative overflow-hidden bg-[#FCFBF7] rounded-b-[36px] max-h-[820px] min-h-[640px]">
-
-        {/* Radial Scholar Green glow */}
+    <div className="bg-[#1F3D2E]">
+      <section className="relative  min-h-[550px] w-full overflow-hidden bg-[#FCFBF7] rounded-b-[40px] flex flex-col">
+        
+        {/* Radial Background Glow */}
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-          <div className="h-[600px] w-[600px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(31,61,46,0.12)_0%,transparent_70%)]" />
+          <div className="h-full w-full rounded-full bg-[radial-gradient(circle,rgba(200,241,53,0.12)_0%,transparent_70%)]" />
         </div>
 
-        {/* Decorative bursts */}
-        <div className="absolute left-14 top-16 z-10 flex h-8 w-8 animate-[float_5s_ease-in-out_infinite] items-center justify-center rounded-[10px] bg-[#D2FF3A]">
-          <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none">
-            <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07" stroke="#1F3D2E" strokeWidth="2.5" strokeLinecap="round" />
-          </svg>
-        </div>
-        <div className="absolute right-14 top-20 z-10 flex h-8 w-8 animate-[float_5s_ease-in-out_1.5s_infinite] items-center justify-center rounded-[10px] bg-[#D2FF3A]">
-          <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none">
-            <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07" stroke="#1F3D2E" strokeWidth="2.5" strokeLinecap="round" />
-          </svg>
-        </div>
+        {/* 1. TOP HALF: Text Content (50% Height) */}
+        <div className="relative z-20 flex h-[40vh] flex-col items-center justify-center px-6 text-center">
+          {/* Decorative Flowers - Positioned relative to text block */}
+          <div className="absolute left-[10%] top-1/4 animate-[float_5s_ease-in-out_infinite] hidden md:flex h-10 w-10 items-center justify-center rounded-xl bg-[#C8F135] shadow-sm">
+            <span className="text-[#1F3D2E] text-xl font-bold">＊</span>
+          </div>
+          <div className="absolute right-[10%] top-1/3 animate-[float_5s_ease-in-out_1.5s_infinite] hidden md:flex h-10 w-10 items-center justify-center rounded-xl bg-[#C8F135] shadow-sm">
+            <span className="text-[#1F3D2E] text-xl font-bold">＊</span>
+          </div>
 
-        {/* IMAGE — bottom-0 so it sits flush */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-[1] w-[500px] h-[100%]">
-          <Image
-            src="/hero/hero-section.png"
-            alt="Instructor"
-            fill
-            sizes="100vw"
-            className="object-contain object-bottom"
-            priority
-          />
-        </div>
-
-        {/* HEADLINE */}
-        <div className="relative z-10 flex flex-col items-center pt-10 text-center px-6">
-
-          <h1 className="mb-3 max-w-[800px] animate-[fadeUp_0.7s_0.2s_cubic-bezier(0.16,1,0.3,1)_both] font-serif text-[62px] font-normal leading-[1.05] tracking-[-2px] text-[#1F3D2E]">
+          <h1 className="font-serif font-medium leading-[1.1] tracking-tight text-[#1F3D2E] text-4xl sm:text-5xl lg:text-6xl animate-[fadeUp_0.8s_ease-out_both]">
             Empowering Students
             <br />
-            Through{" "}
-            <span className="relative italic after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:rounded after:bg-[#D2FF3A] after:origin-left after:scale-x-0 after:animate-[lineReveal_0.5s_1s_cubic-bezier(0.16,1,0.3,1)_forwards]">
-              Expert
-            </span>{" "}
-            Learning
+            Through <span className="italic underline decoration-[#C8F135] decoration-4 underline-offset-4">Expert</span> Learning
           </h1>
 
-          <p className="max-w-[360px] animate-[fadeUp_0.7s_0.3s_cubic-bezier(0.16,1,0.3,1)_both] text-[13.5px] font-light leading-[1.85] text-[#1F3D2E]">
-            From coding to competitive exams, we deliver proven training that elevates your career.
+          <p className="mt-4 max-w-md md:max-w-xl text-[#1F3D2E]/70 text-sm md:text-base font-light leading-relaxed animate-[fadeUp_0.8s_0.2s_ease-out_both]">
+            Master high-demand skills and bridge the gap from learning to earning with Feathertech Institute.
           </p>
         </div>
 
-        {/* LEFT STAT CARD */}
-        <div className="absolute left-[8%] top-1/2 -translate-y-1/2 z-20 flex items-center gap-3 rounded-[18px] border border-white/90 bg-white/60 px-4 py-3 shadow-[0_4px_32px_rgba(0,0,0,0.07)] backdrop-blur-xl animate-[fadeUp_0.7s_0.5s_cubic-bezier(0.16,1,0.3,1)_both]">
-          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[10px] bg-[#D2FF3A] text-lg">🎓</span>
-          <div>
-            <p className="text-[20px] font-medium leading-none tracking-tight text-[#1F3D2E]">5000+</p>
-            <p className="mt-1 text-[11px] font-light text-[#999]">Students Trained</p>
+        {/* 2. BOTTOM HALF: Image & Stats (50% Height) */}
+        <div className="relative flex h-[32vh] w-full flex-col items-center justify-end mt-25">
+          
+          {/* Stats - Floating slightly higher to stay in view */}
+          <div className="hidden lg:flex absolute left-[5%] xl:left-[12%] bottom-[30%] z-30 animate-[fadeUp_0.8s_0.4s_ease-out_both]">
+            <div className="flex items-center gap-3 rounded-2xl bg-white p-4 shadow-xl border border-gray-100">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#C8F135] text-lg">🎓</div>
+              <div>
+                <p className="text-xl font-bold text-[#1F3D2E]">5000+</p>
+                <p className="text-[9px] uppercase tracking-widest text-gray-400 font-bold">Students</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="hidden lg:flex absolute right-[5%] xl:right-[12%] bottom-[30%] z-30 animate-[fadeUp_0.8s_0.5s_ease-out_both]">
+            <div className="flex flex-col items-start rounded-2xl bg-white p-4 shadow-xl border border-gray-100">
+              <div className="flex gap-0.5 mb-1 text-[#C8F135] text-xs">★★★★★</div>
+              <p className="text-xl font-bold text-[#1F3D2E]">8+ Years</p>
+              <p className="text-[9px] uppercase tracking-widest text-gray-400 font-bold">Experience</p>
+            </div>
+          </div>
+
+          {/* Large Hero Image - Overflows container for massive look */}
+          <div className="relative h-full w-full max-w-4xl flex items-end justify-center">
+            <div className="relative h-[110%] w-full z-10">
+              <Image
+                src="/hero/hero-section.png"
+                alt="Instructor"
+                fill
+                className="object-contain object-bottom scale-125 lg:scale-150 origin-bottom"
+                priority
+              />
+              {/* Soft background circle */}
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] aspect-square bg-gray-100/50 rounded-full -z-10" />
+            </div>
+          </div>
+
+          {/* Fixed Bottom CTA Bar - Positioned to end exactly with the display */}
+          <div className="absolute bottom-6 z-40 flex items-center gap-1 rounded-full bg-white/90 p-1.5 shadow-2xl backdrop-blur-md border border-white animate-[fadeUp_0.8s_0.7s_ease-out_both]">
+            <Link href="/courses" className="rounded-full bg-[#C8F135] px-8 py-3 text-sm font-bold text-[#1F3D2E] transition-all hover:scale-105">
+              Explore Courses
+            </Link>
+            <Link href="/contact" className="rounded-full px-6 text-sm font-semibold text-[#1F3D2E]">
+              Let&apos;s Connect
+            </Link>
           </div>
         </div>
 
-        {/* RIGHT STAT CARD */}
-        <div className="absolute right-[8%] top-1/2 -translate-y-1/2 z-20 rounded-[18px] border border-white/90 bg-white/60 px-4 py-3 shadow-[0_4px_32px_rgba(0,0,0,0.07)] backdrop-blur-xl animate-[fadeUp_0.7s_0.6s_cubic-bezier(0.16,1,0.3,1)_both]">
-          <p className="mb-1 text-[11px] tracking-[2px] text-[#D2FF3A]">★★★★★</p>
-          <p className="text-[20px] font-medium leading-none tracking-tight text-[#1F3D2E]">8+ Yrs</p>
-          <p className="mt-1 text-[11px] font-light text-[#999]">Experience</p>
-        </div>
-
-        {/* CTA BAR */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex items-center gap-0.5 rounded-full border border-white/80 bg-white/85 p-1.5 shadow-[0_8px_40px_rgba(0,0,0,0.15)] backdrop-blur-2xl whitespace-nowrap animate-[fadeUp_0.7s_0.7s_cubic-bezier(0.16,1,0.3,1)_both]">
-          <Link
-            href="/courses"
-            className="rounded-full bg-[#D2FF3A] px-7 py-2.5 text-[13px] font-semibold text-[#1F3D2E] transition-opacity hover:opacity-80"
-          >
-            Explore Courses
-          </Link>
-          <Link
-            href="/contact"
-            className="rounded-full px-6 py-2.5 text-[13px] font-light text-[#444] transition-colors hover:text-[#1F3D2E]"
-          >
-            Let&apos;s Connect
-          </Link>
-        </div>
-
-        {/* Keyframe animations are defined globally in globals.css */}
-
       </section>
+
+      <style jsx global>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-15px) rotate(5deg); }
+        }
+        @keyframes fadeUp {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
     </div>
   );
 }

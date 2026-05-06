@@ -4,10 +4,10 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 const contactInfo = [
-  { icon: "📍", label: "Address", value: "42, Knowledge Park, Anna Nagar, Chennai — 600 040" },
-  { icon: "📞", label: "Phone", value: "+91 98765 43210" },
-  { icon: "✉️", label: "Email", value: "admissions@feathertech.in" },
-  { icon: "🕐", label: "Hours", value: "Mon – Sat, 9 AM – 7 PM IST" },
+  { icon: "📍", label: "Address", value: "46A, V.P.Sithan Nagar, Vedar Puliyankulam, Thiru Nagar, Madurai - 625006" },
+  { icon: "📞", label: "Phone", value: "+91 99449 15740" },
+  { icon: "✉️", label: "Email", value: "feathertechinstitute@gmail.com" },
+  // { icon: "🕐", label: "Hours", value: "Mon – Sat, 9 AM – 7 PM IST" },
 ];
 
 const courseOptions = [
@@ -29,146 +29,144 @@ export default function ContactPage() {
     setSubmitted(true);
   };
 
-  const inputStyle: React.CSSProperties = {
-    width: "100%", padding: "12px 16px", borderRadius: "9px",
-    border: "1.5px solid #E8E4DC", backgroundColor: "#FCFBF7",
-    fontFamily: "var(--font-inter), system-ui, sans-serif",
-    fontSize: "14px", color: "#1A1A1A", outline: "none",
-    transition: "border-color 0.18s ease", boxSizing: "border-box",
-  };
-
   return (
     <>
       <Navbar />
-      <main style={{ paddingTop: "20px" }}>
+      <main className="pt-5">
+
         {/* Hero */}
-        <section style={{ backgroundColor: "#1F3D2E", padding: "80px 28px", textAlign: "center" }}>
-          <div style={{ maxWidth: "640px", margin: "0 auto" }}>
-            <p style={{ fontSize: "11.5px", letterSpacing: "2.5px", textTransform: "uppercase", color: "#D2FF3A", fontWeight: 500, marginBottom: "14px" }}>
+        <section className="bg-[#1F3D2E] px-5 sm:px-7 py-14 sm:py-20 text-center">
+          <div className="max-w-[640px] mx-auto">
+            <p className="text-[10.5px] sm:text-[11.5px] tracking-[2.5px] uppercase text-[#C8F135] font-medium mb-3 sm:mb-4">
               Get In Touch
             </p>
-            <h1 style={{
-              fontFamily: "var(--font-playfair), Georgia, serif",
-              fontSize: "clamp(30px, 5vw, 50px)", fontWeight: 700,
-              color: "#FCFBF7", letterSpacing: "-1px", lineHeight: 1.1,
-            }}>
+            <h1
+              className="font-serif font-bold text-[#FCFBF7] tracking-[-1px] leading-[1.1]"
+              style={{ fontSize: "clamp(28px, 5vw, 50px)" }}
+            >
               We&apos;d Love to<br />
-              <span style={{ color: "#D2FF3A", fontStyle: "italic" }}>Hear From You.</span>
+              <span className="text-[#C8F135] italic">Hear From You.</span>
             </h1>
           </div>
         </section>
 
         {/* Contact body */}
-        <section style={{ backgroundColor: "#F0EFE9", padding: "72px 28px" }}>
-          <div style={{ maxWidth: "1100px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1.6fr", gap: "40px", alignItems: "start" }}>
+        <section className="bg-[#F0EFE9] px-4 sm:px-7 py-12 sm:py-16 lg:py-[72px]">
+          <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.6fr] gap-6 sm:gap-8 lg:gap-10 items-start">
 
-            {/* Info column */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-              <div style={{ backgroundColor: "#1F3D2E", borderRadius: "18px", padding: "32px 28px" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "20px", fontWeight: 700, color: "#FCFBF7", marginBottom: "24px" }}>
+            {/* Info column — order-2 on mobile (below form), order-1 on desktop (left column) */}
+            <div className="flex flex-col gap-4 order-2 lg:order-1">
+              <div className="bg-[#1F3D2E] rounded-[16px] sm:rounded-[18px] p-6 sm:p-7 lg:p-8">
+                <h2 className="font-serif text-[18px] sm:text-[20px] font-bold text-[#FCFBF7] mb-5 sm:mb-6">
                   Contact Information
                 </h2>
                 {contactInfo.map((item) => (
-                  <div key={item.label} style={{ display: "flex", gap: "14px", marginBottom: "20px" }}>
-                    <span style={{ fontSize: "20px", flexShrink: 0, marginTop: "1px" }}>{item.icon}</span>
+                  <div key={item.label} className="flex gap-3 sm:gap-4 mb-4 sm:mb-5 last:mb-0">
+                    <span className="text-[18px] sm:text-[20px] shrink-0 mt-[1px]">{item.icon}</span>
                     <div>
-                      <p style={{ fontSize: "10.5px", letterSpacing: "1px", textTransform: "uppercase", color: "#D2FF3A", marginBottom: "3px" }}>{item.label}</p>
-                      <p style={{ fontSize: "13.5px", color: "rgba(252,251,247,0.85)", lineHeight: 1.5 }}>{item.value}</p>
+                      <p className="text-[10px] sm:text-[10.5px] tracking-[1px] uppercase text-[#C8F135] mb-1">{item.label}</p>
+                      <p className="text-[13px] sm:text-[13.5px] text-[rgba(252,251,247,0.85)] leading-[1.5]">{item.value}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
               {/* Map placeholder */}
-              <div style={{
-                borderRadius: "14px", overflow: "hidden",
-                border: "1px solid #E8E4DC", backgroundColor: "#E8E4DC",
-                height: "180px", display: "flex", alignItems: "center", justifyContent: "center",
-                flexDirection: "column", gap: "8px",
-              }}>
-                <span style={{ fontSize: "32px" }}>🗺️</span>
-                <p style={{ fontSize: "12px", color: "#6B7280" }}>Anna Nagar, Chennai</p>
-              </div>
+              {/* <div className="rounded-[12px] sm:rounded-[14px] overflow-hidden border border-[#E8E4DC] bg-[#E8E4DC] h-[140px] sm:h-[180px] flex flex-col items-center justify-center gap-2">
+                <span className="text-[28px] sm:text-[32px]">🗺️</span>
+                <p className="text-[11px] sm:text-[12px] text-[#6B7280]">Anna Nagar, Chennai</p>
+              </div> */}
             </div>
 
-            {/* Form column */}
-            <div style={{ backgroundColor: "#FFFFFF", borderRadius: "20px", border: "1px solid #E8E4DC", padding: "40px 36px" }}>
+            {/* Form column — order-1 on mobile (appears first), order-2 on desktop (right column) */}
+            <div className="bg-white rounded-[16px] sm:rounded-[20px] border border-[#E8E4DC] p-5 sm:p-8 lg:p-10 order-1 lg:order-2">
               {submitted ? (
-                <div style={{ textAlign: "center", padding: "40px 0" }}>
-                  <span style={{ fontSize: "48px", display: "block", marginBottom: "16px" }}>✅</span>
-                  <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "24px", fontWeight: 700, color: "#1F3D2E", marginBottom: "10px" }}>
+                <div className="text-center py-10">
+                  <span className="text-[44px] sm:text-[48px] block mb-4">✅</span>
+                  <h2 className="font-serif text-[20px] sm:text-[24px] font-bold text-[#1F3D2E] mb-2.5">
                     Message Received!
                   </h2>
-                  <p style={{ fontSize: "14px", color: "#6B7280", lineHeight: 1.7 }}>
+                  <p className="text-[13px] sm:text-[14px] text-[#6B7280] leading-[1.7]">
                     Thank you for reaching out. Our team will get back to you within 24 hours.
                   </p>
                 </div>
               ) : (
                 <>
-                  <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "22px", fontWeight: 700, color: "#1A1A1A", marginBottom: "28px" }}>
+                  <h2 className="font-serif text-[19px] sm:text-[22px] font-bold text-[#1A1A1A] mb-5 sm:mb-7">
                     Send Us a Message
                   </h2>
-                  <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "18px" }}>
-                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+                  <form onSubmit={handleSubmit} className="flex flex-col gap-4 sm:gap-[18px]" suppressHydrationWarning>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label style={{ display: "block", fontSize: "11.5px", fontWeight: 600, color: "#374151", marginBottom: "6px", letterSpacing: "0.3px" }}>Full Name *</label>
-                        <input required value={form.name} onChange={e => setForm({ ...form, name: e.target.value })}
-                          placeholder="Your full name" style={inputStyle}
-                          onFocus={e => { e.target.style.borderColor = "#1F3D2E"; }}
-                          onBlur={e => { e.target.style.borderColor = "#E8E4DC"; }} />
+                        <label className="block text-[11px] sm:text-[11.5px] font-semibold text-[#374151] mb-1.5 tracking-[0.3px]">Full Name *</label>
+                        <input
+                          required value={form.name}
+                          onChange={e => setForm({ ...form, name: e.target.value })}
+                          placeholder="Your full name"
+                          className="w-full px-4 py-3 rounded-[9px] border-[1.5px] border-[#E8E4DC] bg-[#FCFBF7] text-[13.5px] text-[#1A1A1A] outline-none transition-colors duration-150 focus:border-[#1F3D2E] placeholder:text-[#9CA3AF]"
+                          suppressHydrationWarning
+                        />
                       </div>
                       <div>
-                        <label style={{ display: "block", fontSize: "11.5px", fontWeight: 600, color: "#374151", marginBottom: "6px", letterSpacing: "0.3px" }}>Email Address *</label>
-                        <input required type="email" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })}
-                          placeholder="you@email.com" style={inputStyle}
-                          onFocus={e => { e.target.style.borderColor = "#1F3D2E"; }}
-                          onBlur={e => { e.target.style.borderColor = "#E8E4DC"; }} />
+                        <label className="block text-[11px] sm:text-[11.5px] font-semibold text-[#374151] mb-1.5 tracking-[0.3px]">Email Address *</label>
+                        <input
+                          required type="email" value={form.email}
+                          onChange={e => setForm({ ...form, email: e.target.value })}
+                          placeholder="you@email.com"
+                          className="w-full px-4 py-3 rounded-[9px] border-[1.5px] border-[#E8E4DC] bg-[#FCFBF7] text-[13.5px] text-[#1A1A1A] outline-none transition-colors duration-150 focus:border-[#1F3D2E] placeholder:text-[#9CA3AF]"
+                          suppressHydrationWarning
+                        />
                       </div>
                     </div>
 
                     <div>
-                      <label style={{ display: "block", fontSize: "11.5px", fontWeight: 600, color: "#374151", marginBottom: "6px", letterSpacing: "0.3px" }}>Phone Number</label>
-                      <input type="tel" value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })}
-                        placeholder="+91 00000 00000" style={inputStyle}
-                        onFocus={e => { e.target.style.borderColor = "#1F3D2E"; }}
-                        onBlur={e => { e.target.style.borderColor = "#E8E4DC"; }} />
+                      <label className="block text-[11px] sm:text-[11.5px] font-semibold text-[#374151] mb-1.5 tracking-[0.3px]">Phone Number</label>
+                      <input
+                        type="tel" value={form.phone}
+                        onChange={e => setForm({ ...form, phone: e.target.value })}
+                        placeholder="+91 00000 00000"
+                        className="w-full px-4 py-3 rounded-[9px] border-[1.5px] border-[#E8E4DC] bg-[#FCFBF7] text-[13.5px] text-[#1A1A1A] outline-none transition-colors duration-150 focus:border-[#1F3D2E] placeholder:text-[#9CA3AF]"
+                        suppressHydrationWarning
+                      />
                     </div>
 
                     <div>
-                      <label style={{ display: "block", fontSize: "11.5px", fontWeight: 600, color: "#374151", marginBottom: "6px", letterSpacing: "0.3px" }}>Course of Interest</label>
-                      <select value={form.course} onChange={e => setForm({ ...form, course: e.target.value })}
-                        style={{ ...inputStyle, appearance: "none", cursor: "pointer" }}
-                        onFocus={e => { e.target.style.borderColor = "#1F3D2E"; }}
-                        onBlur={e => { e.target.style.borderColor = "#E8E4DC"; }}>
+                      <label className="block text-[11px] sm:text-[11.5px] font-semibold text-[#374151] mb-1.5 tracking-[0.3px]">Course of Interest</label>
+                      <select
+                        value={form.course}
+                        onChange={e => setForm({ ...form, course: e.target.value })}
+                        className="w-full px-4 py-3 rounded-[9px] border-[1.5px] border-[#E8E4DC] bg-[#FCFBF7] text-[13.5px] text-[#1A1A1A] outline-none transition-colors duration-150 focus:border-[#1F3D2E] cursor-pointer appearance-none"
+                        suppressHydrationWarning
+                      >
                         <option value="">Select a course…</option>
                         {courseOptions.map(o => <option key={o} value={o}>{o}</option>)}
                       </select>
                     </div>
 
                     <div>
-                      <label style={{ display: "block", fontSize: "11.5px", fontWeight: 600, color: "#374151", marginBottom: "6px", letterSpacing: "0.3px" }}>Message *</label>
-                      <textarea required rows={5} value={form.message} onChange={e => setForm({ ...form, message: e.target.value })}
+                      <label className="block text-[11px] sm:text-[11.5px] font-semibold text-[#374151] mb-1.5 tracking-[0.3px]">Message *</label>
+                      <textarea
+                        required rows={5} value={form.message}
+                        onChange={e => setForm({ ...form, message: e.target.value })}
                         placeholder="Tell us about your goals or any questions you have…"
-                        style={{ ...inputStyle, resize: "vertical", lineHeight: 1.65 }}
-                        onFocus={e => { e.target.style.borderColor = "#1F3D2E"; }}
-                        onBlur={e => { e.target.style.borderColor = "#E8E4DC"; }} />
+                        className="w-full px-4 py-3 rounded-[9px] border-[1.5px] border-[#E8E4DC] bg-[#FCFBF7] text-[13.5px] text-[#1A1A1A] outline-none transition-colors duration-150 focus:border-[#1F3D2E] placeholder:text-[#9CA3AF] resize-y leading-[1.65]"
+                        suppressHydrationWarning
+                      />
                     </div>
 
-                    <button type="submit" style={{
-                      padding: "14px 32px", borderRadius: "9px", border: "none",
-                      backgroundColor: "#D2FF3A", color: "#1F3D2E",
-                      fontFamily: "var(--font-inter), system-ui, sans-serif",
-                      fontSize: "14px", fontWeight: 700, cursor: "pointer",
-                      transition: "all 0.18s ease", alignSelf: "flex-start",
-                    }}
-                      onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.backgroundColor = "#BCEB2E"; (e.currentTarget as HTMLButtonElement).style.boxShadow = "0 6px 20px rgba(210,255,58,0.5)"; }}
-                      onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.backgroundColor = "#D2FF3A"; (e.currentTarget as HTMLButtonElement).style.boxShadow = "none"; }}>
+                    <button
+                      type="submit"
+                      suppressHydrationWarning
+                      className="w-full sm:w-auto self-start px-7 sm:px-8 py-3.5 rounded-[9px] bg-[#C8F135] text-[#1F3D2E] text-[13.5px] sm:text-[14px] font-bold transition-all duration-150 hover:bg-[#BCEB2E] hover:shadow-[0_6px_20px_rgba(200,241,53,0.45)] cursor-pointer border-none"
+                    >
                       Submit Message →
                     </button>
                   </form>
                 </>
               )}
             </div>
+
           </div>
         </section>
       </main>

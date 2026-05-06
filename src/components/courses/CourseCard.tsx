@@ -2,8 +2,8 @@ import Link from "next/link";
 import { Course } from "@/lib/courses";
 
 const badgeConfig = {
-  popular: { label: "⭐ Most Popular", bg: "#1F3D2E", color: "#D2FF3A" },
-  new:     { label: "✦ New Batch",    bg: "#D2FF3A", color: "#1F3D2E" },
+  popular: { label: "⭐ Most Popular", bg: "#1F3D2E", color: "#C8F135" },
+  new:     { label: "✦ New Batch",    bg: "#C8F135", color: "#1F3D2E" },
   hot:     { label: "🔥 In Demand",   bg: "#f59e0b", color: "#1c1100" },
 };
 
@@ -124,8 +124,8 @@ export default function CourseCard({ course, featured = false }: Props) {
           <Link href={`/courses/${course.id}`} style={{
             borderRadius: "9px", padding: "8px 18px",
             fontSize: "12px", fontWeight: 600, textDecoration: "none",
-            backgroundColor: course.featured ? "#D2FF3A" : "#1F3D2E",
-            color: course.featured ? "#1F3D2E" : "#FCFBF7",
+            backgroundColor: course.featured ? "#1F3D2E" : "#1F3D2E",
+            color: course.featured ? "#C8F135" : "#C8F135",
             transition: "all 0.18s ease",
           }}
             onMouseEnter={e => { e.currentTarget.style.opacity = "0.85"; }}
