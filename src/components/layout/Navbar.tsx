@@ -87,7 +87,7 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <Link
-          href="/get-started"
+          href="/contact"
           className="hidden md:inline-block flex-shrink-0 text-[13px] font-medium tracking-wide rounded-full px-5 py-2.5 transition-all duration-200 hover:brightness-110"
           style={{
             color: "#0d1a10",
@@ -180,7 +180,7 @@ export default function Navbar() {
 
           {/* Mobile CTA */}
           <Link
-            href="/get-started"
+            href="/contact"
             onClick={() => setMenuOpen(false)}
             className="mt-2 text-center text-[13px] font-medium tracking-wide rounded-full px-5 py-3 transition-all duration-200 hover:brightness-110"
             style={{
