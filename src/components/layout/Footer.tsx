@@ -11,11 +11,11 @@ const footerLinks = {
     { label: "Contact", href: "/contact" },
   ],
   Courses: [
-    { label: "Full-Stack Web Dev", href: "/courses" },
-    { label: "Python & Data Science", href: "/courses" },
-    { label: "UPSC Foundation", href: "/courses" },
-    { label: "UI/UX Design", href: "/courses" },
-    { label: "Bank PO Prep", href: "/courses" },
+    { label: "UI/UX Design Mastery", href: "/courses" },
+    { label: "MERN/MEAN Full Stack", href: "/courses" },
+    { label: "Digital Marketing Program", href: "/courses" },
+    { label: "Software Testing", href: "/courses" },
+    { label: "DevOps", href: "/courses" }, 
   ],
 };
 
