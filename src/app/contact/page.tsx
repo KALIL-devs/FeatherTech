@@ -2,31 +2,70 @@
 import { useState } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { courses } from "@/lib/courses";
 
 const contactInfo = [
   { icon: "📍", label: "Address", value: "46A, V.P.Sithan Nagar, Vedar Puliyankulam, Thiru Nagar, Madurai - 625006" },
-  { icon: "📞", label: "Phone", value: "+91 99449 15740" },
+  { icon: "📞", label: "Phone", value: "+91 93618 06594" },
   { icon: "✉️", label: "Email", value: "feathertechinstitute@gmail.com" },
   // { icon: "🕐", label: "Hours", value: "Mon – Sat, 9 AM – 7 PM IST" },
 ];
 
-const courseOptions = [
-  "Full-Stack Web Development",
-  "Python & Data Science",
-  "UPSC Civil Services Foundation",
-  "UI/UX Design Mastery",
-  "Digital Marketing & SEO",
-  "Bank PO & Clerk Preparation",
-  "Other / Not sure yet",
-];
+// const courseOptions = [
+//   "Full-Stack Web Development",
+//   "Python & Data Science",
+//   "UPSC Civil Services Foundation",
+//   "UI/UX Design Mastery",
+//   "Digital Marketing & SEO",
+//   "Bank PO & Clerk Preparation",
+//   "Other / Not sure yet",
+// ];
+
+type FormData = {
+  fullName: string;
+  mobile: string;
+  email: string;
+  location: string;
+  message: string;
+};
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: "", email: "", phone: "", course: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          fullName: form.name,
+          mobile: form.phone,
+          email: form.email,
+          intent: form.course,
+          message: form.message,
+          source: 'Contact Page'
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        const errorData = await response.json();
+        alert('Failed to submit: ' + (errorData.message || 'Unknown error'));
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      alert('An error occurred. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -55,28 +94,29 @@ export default function ContactPage() {
           <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.6fr] gap-6 sm:gap-8 lg:gap-10 items-start">
 
             {/* Info column — order-2 on mobile (below form), order-1 on desktop (left column) */}
-            <div className="flex flex-col gap-4 order-2 lg:order-1">
-              <div className="bg-[#1F3D2E] rounded-[16px] sm:rounded-[18px] p-6 sm:p-7 lg:p-8">
-                <h2 className="font-serif text-[18px] sm:text-[20px] font-bold text-[#FCFBF7] mb-5 sm:mb-6">
-                  Contact Information
-                </h2>
-                {contactInfo.map((item) => (
-                  <div key={item.label} className="flex gap-3 sm:gap-4 mb-4 sm:mb-5 last:mb-0">
-                    <span className="text-[18px] sm:text-[20px] shrink-0 mt-[1px]">{item.icon}</span>
-                    <div>
-                      <p className="text-[10px] sm:text-[10.5px] tracking-[1px] uppercase text-[#C8F135] mb-1">{item.label}</p>
-                      <p className="text-[13px] sm:text-[13.5px] text-[rgba(252,251,247,0.85)] leading-[1.5]">{item.value}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Map placeholder */}
-              {/* <div className="rounded-[12px] sm:rounded-[14px] overflow-hidden border border-[#E8E4DC] bg-[#E8E4DC] h-[140px] sm:h-[180px] flex flex-col items-center justify-center gap-2">
-                <span className="text-[28px] sm:text-[32px]">🗺️</span>
-                <p className="text-[11px] sm:text-[12px] text-[#6B7280]">Anna Nagar, Chennai</p>
-              </div> */}
-            </div>
+<div className="flex flex-col gap-4 order-2 lg:order-1">
+  <div className="bg-[#1F3D2E] rounded-[16px] sm:rounded-[18px] p-6 sm:p-7 lg:p-8">
+    <h2 className="font-serif text-[18px] sm:text-[20px] font-bold text-[#FCFBF7] mb-5 sm:mb-6">
+      Contact Information
+    </h2>
+    {contactInfo.map((item) => (
+      <div key={item.label} className="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-5 last:mb-0">
+        <div className="w-9 h-9 shrink-0 rounded-[10px] flex items-center justify-center text-base
+          bg-[rgba(200,241,53,0.12)] border border-[rgba(200,241,53,0.2)]">
+          {item.icon}
+        </div>
+        <div className="pt-0.5">
+          <p className="text-[10px] sm:text-[10.5px] tracking-[1px] uppercase text-[#C8F135] mb-1">
+            {item.label}
+          </p>
+          <p className="text-[13px] sm:text-[13.5px] text-[rgba(252,251,247,0.85)] leading-[1.5]">
+            {item.value}
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
 
             {/* Form column — order-1 on mobile (appears first), order-2 on desktop (right column) */}
             <div className="bg-white rounded-[16px] sm:rounded-[20px] border border-[#E8E4DC] p-5 sm:p-8 lg:p-10 order-1 lg:order-2">
@@ -140,7 +180,10 @@ export default function ContactPage() {
                         suppressHydrationWarning
                       >
                         <option value="">Select a course…</option>
-                        {courseOptions.map(o => <option key={o} value={o}>{o}</option>)}
+                        {/* {courseOptions.map(o => <option key={o} value={o}>{o}</option>)} */}
+                        {courses.map(c => (
+                              <option key={c.id} value={c.title}>{c.title}</option>
+                            ))}
                       </select>
                     </div>
 
@@ -157,10 +200,11 @@ export default function ContactPage() {
 
                     <button
                       type="submit"
+                      disabled={loading}
                       suppressHydrationWarning
-                      className="w-full sm:w-auto self-start px-7 sm:px-8 py-3.5 rounded-[9px] bg-[#C8F135] text-[#1F3D2E] text-[13.5px] sm:text-[14px] font-bold transition-all duration-150 hover:bg-[#BCEB2E] hover:shadow-[0_6px_20px_rgba(200,241,53,0.45)] cursor-pointer border-none"
+                      className="w-full sm:w-auto self-start px-7 sm:px-8 py-3.5 rounded-[9px] bg-[#C8F135] text-[#1F3D2E] text-[13.5px] sm:text-[14px] font-bold transition-all duration-150 hover:bg-[#BCEB2E] hover:shadow-[0_6px_20px_rgba(200,241,53,0.45)] cursor-pointer border-none disabled:opacity-70 disabled:cursor-not-allowed"
                     >
-                      Submit Message →
+                      {loading ? "Submitting..." : "Submit Message →"}
                     </button>
                   </form>
                 </>

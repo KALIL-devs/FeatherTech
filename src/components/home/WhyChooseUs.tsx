@@ -42,7 +42,7 @@ const WhyChooseUs = () => {
               <span className="text-xs font-semibold uppercase tracking-[3px] text-[#D2FF3A]">Why Choose Us</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight max-w-2xl">
-              Why Madurai&apos;s Learners Choose Feathertech
+              Why Learners Choose Feathertech
             </h2>
           </div>
 

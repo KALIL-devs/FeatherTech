@@ -105,27 +105,31 @@ export default function CourseCard({ course, featured = false }: Props) {
       </div>
 
       {/* Footer */}
+{/* Footer */}
       <div style={{
         display: "flex", alignItems: "center", justifyContent: "space-between",
         borderTop: "1px solid #E8E4DC", padding: "12px 20px",
       }}>
-        <div>
-          <p style={{ fontSize: "17px", fontWeight: 700, color: "#1F3D2E", margin: 0 }}>
-            ₹{course.fee.toLocaleString("en-IN")}
-          </p>
-          <p style={{ fontSize: "10.5px", color: "#6B7280", margin: "2px 0 0" }}>
-            {course.enrolled.toLocaleString()} enrolled
-          </p>
+        <div style={{ display: "flex", alignItems: "center", gap: "4px" }}>
+          {[1, 2, 3, 4, 5].map((star) => (
+            <span key={star} style={{
+              fontSize: "13px",
+              color: star <= Math.round(course.rating) ? "#F59E0B" : "#D1D5DB",
+            }}>★</span>
+          ))}
+          <span style={{ fontSize: "11px", color: "#6B7280", marginLeft: "4px" }}>
+            {course.rating.toFixed(1)}
+          </span>
         </div>
         <div style={{ display: "flex", gap: "8px" }}>
           {course.weekendBatch && (
-            <span style={{ fontSize: "10px", color: "#6B7280", alignSelf: "center" }}>📅 Weekend</span>
+            <span style={{ fontSize: "10px", color: "#6B7280", alignSelf: "center" }}></span>
           )}
           <Link href={`/contact`} style={{
             borderRadius: "9px", padding: "8px 18px",
             fontSize: "12px", fontWeight: 600, textDecoration: "none",
-            backgroundColor: course.featured ? "#1F3D2E" : "#1F3D2E",
-            color: course.featured ? "#C8F135" : "#C8F135",
+            backgroundColor: "#1F3D2E",
+            color: "#C8F135",
             transition: "all 0.18s ease",
           }}
             onMouseEnter={e => { e.currentTarget.style.opacity = "0.85"; }}

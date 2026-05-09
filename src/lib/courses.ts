@@ -12,9 +12,7 @@ export interface Course {
   title: string;
   category: CourseCategory;
   description: string;
-  /** Absolute path under /public or empty string (user will supply images). */
   image: string;
-  /** CSS gradient shown when image is empty. */
   gradient: string;
   badge: CourseBadge;
   tags: string[];
@@ -22,10 +20,9 @@ export interface Course {
   level: CourseLevel;
   featured: boolean;
   weekendBatch: boolean;
-  /** Fee in INR */
   fee: number;
-  /** Number of enrolled students */
   enrolled: number;
+  rating: number;
 }
 
 export const courses: Course[] = [
@@ -45,6 +42,7 @@ export const courses: Course[] = [
     weekendBatch: true,
     fee: 28000,
     enrolled: 1240,
+    rating: 3.8,
   },
   {
     id: "ui-ux-design",
@@ -62,6 +60,7 @@ export const courses: Course[] = [
     weekendBatch: true,
     fee: 18000,
     enrolled: 870,
+    rating: 4.6,
   },
   {
     id: "digital-marketing",
@@ -79,6 +78,7 @@ export const courses: Course[] = [
     weekendBatch: false,
     fee: 16000,
     enrolled: 980,
+    rating: 4.2,
   },
   {
     id: "software-testing",
@@ -96,6 +96,7 @@ export const courses: Course[] = [
     weekendBatch: true,
     fee: 18000,
     enrolled: 640,
+    rating: 4.3,
   },
   {
     id: "devops",
@@ -113,6 +114,7 @@ export const courses: Course[] = [
     weekendBatch: false,
     fee: 24000,
     enrolled: 510,
+    rating: 4.7,
   },
 ];
 
