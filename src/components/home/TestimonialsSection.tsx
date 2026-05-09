@@ -22,12 +22,39 @@ const testimonials = [
     rating: 5,
   },
   {
+    name: "Priya S.",
+    role: "Freelance Marketer",
+    course: "Digital Marketing",
+    quote:
+      "Never thought digital marketing could change my career path! In 60 days, I learned how to run ad campaigns, create reels & convert clients. My first client project gave me ₹22,000 profit. Thanks to my mentor for pushing me beyond limits.",
+    avatar: "PS",
+    rating: 5,
+  },
+  {
     name: "VPM. Prithivi Rajan",
     role: "UI/UX Student",
     course: "UI/UX Design",
     quote:
       "I recently received my welcome kit from Feather Tech Institute and I truly appreciate it! The sketchbook, pens, and T-shirt are really motivating and make me feel more connected to the learning journey.",
     avatar: "PR",
+    rating: 5,
+  },
+  {
+    name: "Karthik",
+    role: "Job Switcher → Freelancer",
+    course: "Digital Marketing",
+    quote:
+      "Na oru normal sales job la irundhen — after this 60 days digital marketing course, I cracked my first client project worth ₹30K. Learned Meta Ads, content strategy, and client closing tips. Now full confidence to work as a freelancer! Thanks mentor.",
+    avatar: "KA",
+    rating: 5,
+  },
+  {
+    name: "Anusha",
+    role: "Work from Home Mom",
+    course: "Digital Marketing",
+    quote:
+      "I wanted to restart my career after a 4-year gap. This course gave me confidence and skills. Now I manage 2 small business Instagram pages and earn ₹25K monthly. Thanks to the mentor for patient teaching and weekly client task support.",
+    avatar: "AN",
     rating: 5,
   },
   {
@@ -46,6 +73,15 @@ const testimonials = [
     quote:
       "Feather Tech Institute is a growing institute offering tech-focused programs. Their dedicated UI/UX course shows they're adapting to current industry needs — which is a great sign for learners like me.",
     avatar: "SV",
+    rating: 5,
+  },
+  {
+    name: "V. Deepak",
+    role: "Freelancer",
+    course: "Digital Marketing",
+    quote:
+      "From zero knowledge to closing a ₹35,000 client project in 2 months! This course taught me branding, ad setup, content planning — everything practical. Mentor oda feedback life changing da!",
+    avatar: "VD",
     rating: 5,
   },
 ];

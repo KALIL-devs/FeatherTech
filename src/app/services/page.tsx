@@ -317,13 +317,13 @@ export default function ServicesPage() {
               </p>
             </div>
             <a
-              href="tel:9944915740"
+              href="tel:+91 93618 06594"  
               style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "18px 36px", borderRadius: "12px", backgroundColor: "#C8F135", color: "#1F3D2E", textDecoration: "none", flexShrink: 0, transition: "background 0.18s ease" }}
               onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#b8e02a"; }}
               onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#C8F135"; }}
             >
               <span style={{ fontSize: "11px", fontWeight: 600, letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "4px" }}>Call Us Now</span>
-              <span style={{ fontSize: "20px", fontWeight: 800, letterSpacing: "0.5px" }}>9944915740</span>
+              <span style={{ fontSize: "20px", fontWeight: 800, letterSpacing: "0.5px" }}>+91 93618 06594</span>
             </a>
           </div>
         </section>

@@ -18,18 +18,10 @@ export default function Home() {
         <StatsSection />
         <CoursesSection />
         {/* <CourseOfferings />  */}
-
         <WhyChooseUs />
-  
-
         <TestimonialsSection />
         <FAQSection />
-
-
         {/* <FeaturesSection /> */}
-
-
-
       </main>
       <Footer />
     </>
