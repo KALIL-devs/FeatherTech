@@ -268,7 +268,7 @@ export default function AboutPage() {
                     }}
                   >
                     {/* Photo area */}
-                    <div style={{ position: "relative", height: "220px", overflow: "hidden" }}>
+                    <div style={{ position: "relative", height: "360px", overflow: "hidden" }}>
                       {/* ↓ PLACEHOLDER */}
                       {/* <ImgPlaceholder
                         path={member.image}
