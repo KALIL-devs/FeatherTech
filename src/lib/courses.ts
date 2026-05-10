@@ -32,7 +32,7 @@ export const courses: Course[] = [
     category: "Technology",
     description:
       "Build full-stack web applications using MongoDB, Express.js, React, and Node.js with hands-on real-world projects.",
-    image: "",
+    image: "/images/courses/mern.png",
     gradient: "linear-gradient(135deg, #1F3D2E 0%, #2A5140 50%, #C8F135 100%)",
     badge: "popular",
     tags: ["MongoDB", "Express.js", "React", "Node.js"],
@@ -50,7 +50,7 @@ export const courses: Course[] = [
     category: "Design",
     description:
       "Master Figma, Adobe XD, wireframing, prototyping, and user research to craft world-class digital experiences.",
-    image: "",
+    image: "/images/courses/uiux.png",
     gradient: "linear-gradient(135deg, #2d0047 0%, #6b21a8 50%, #e879f9 100%)",
     badge: "new",
     tags: ["Figma", "Adobe XD", "Prototyping", "User Research"],
@@ -68,7 +68,7 @@ export const courses: Course[] = [
     category: "Business",
     description:
       "Master SEO, Google Ads, Meta campaigns, content marketing, and analytics to drive real business growth.",
-    image: "",
+    image: "/images/courses/digitalmarketing.png",
     gradient: "linear-gradient(135deg, #1e3a5f 0%, #0ea5e9 50%, #38bdf8 100%)",
     badge: "popular",
     tags: ["SEO", "Google Ads", "Meta Ads", "Analytics"],
@@ -86,7 +86,7 @@ export const courses: Course[] = [
     category: "Testing",
     description:
       "Learn manual testing, automation with Selenium, test planning, bug reporting, and SDLC best practices.",
-    image: "",
+    image: "/images/courses/testing.png",
     gradient: "linear-gradient(135deg, #3d1c00 0%, #7a3800 50%, #f0b86e 100%)",
     badge: "hot",
     tags: ["Manual Testing", "Selenium", "JIRA", "Agile"],
@@ -104,7 +104,7 @@ export const courses: Course[] = [
     category: "DevOps",
     description:
       "Gain hands-on expertise in CI/CD pipelines, Docker, Kubernetes, Jenkins, and cloud infrastructure automation.",
-    image: "",
+    image: "/images/courses/devops.png",
     gradient: "linear-gradient(135deg, #1a3a4a 0%, #2d6a8f 50%, #C8F135 100%)",
     badge: "new",
     tags: ["Docker", "Kubernetes", "Jenkins", "AWS"],

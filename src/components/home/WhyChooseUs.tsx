@@ -53,7 +53,7 @@ const WhyChooseUs = () => {
             <div className="lg:col-span-5 grid grid-cols-2 gap-4">
               <div className="relative rounded-3xl overflow-hidden h-full min-h-[380px] border border-white/10">
                 <img
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80"
+                  src="/images/home/students_collaborating.png"
                   alt="Feathertech students collaborating"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -65,7 +65,7 @@ const WhyChooseUs = () => {
               <div className="flex flex-col gap-4">
                 <div className="rounded-3xl overflow-hidden flex-1 border border-white/10">
                   <img
-                    src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80"
+                    src="/images/home/training_session.png"
                     alt="Training session at Feathertech"
                     className="w-full h-full object-cover"
                   />
