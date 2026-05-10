@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import CourseCard from "@/components/courses/CourseCard";
+
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type CourseCategory = "All" | "Design" | "Development" | "Digital Marketing" | "Testing" | "DevOps";
@@ -340,7 +340,7 @@ export default function CoursesPage() {
               className="steps-grid"
               style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px" }}
             >
-              {steps.map((step, i) => (
+              {steps.map((step) => (
                 <div
                   key={step.number}
                   style={{

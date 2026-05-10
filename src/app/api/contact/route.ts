@@ -62,10 +62,10 @@ export async function POST(request: Request) {
     });
 
     return NextResponse.json({ success: true, message: 'Message securely saved to Google Sheets.', data: response.data });
-  } catch (error: any) {
+  } catch (error) {
     console.error('Error saving to Google Sheets:', error);
     return NextResponse.json(
-      { success: false, message: 'An extra internal error occurred while trying to save the entry.', error: error.message },
+      { success: false, message: 'An extra internal error occurred while trying to save the entry.', error: (error as Error).message },
       { status: 500 }
     );
   }

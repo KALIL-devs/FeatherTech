@@ -20,7 +20,7 @@ export default function StatsSection() {
 
       <div className="max-w-6xl mx-auto relative z-10">
         <p className="text-center text-xs font-semibold uppercase tracking-[3px] text-[#D2FF3A] mb-3 opacity-90">
-          Here's what we've
+          Here&apos;s what we&apos;ve
         </p>
 
         <h2 className="text-center font-serif text-4xl md:text-5xl font-bold text-[#FCFBF7] mb-14 leading-tight">

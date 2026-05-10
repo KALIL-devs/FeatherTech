@@ -26,42 +26,6 @@ const leadership = [
   // { name: "Tamizhamuthan.G", role: "Director",           avatar: "TG", image: "/images/team/tamizhamuthan.jpg" },
 ];
 
-// ─── Reusable placeholder ─────────────────────────────────────────────────────
-function ImgPlaceholder({
-  path,
-  label,
-  height = "100%",
-  bg = "#D4E8D0",
-  radius = "0px",
-}: {
-  path: string;
-  label: string;
-  height?: string;
-  bg?: string;
-  radius?: string;
-}) {
-  return (
-    <div style={{
-      width: "100%", height,
-      backgroundColor: bg,
-      borderRadius: radius,
-      display: "flex", flexDirection: "column",
-      alignItems: "center", justifyContent: "center", gap: "8px",
-    }}>
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(31,61,46,0.3)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
-        <circle cx="12" cy="13" r="4" />
-      </svg>
-      <span style={{ fontSize: "10.5px", fontWeight: 600, color: "rgba(31,61,46,0.4)", letterSpacing: "1px", textTransform: "uppercase" }}>
-        {label}
-      </span>
-      <span style={{ fontSize: "9.5px", color: "rgba(31,61,46,0.28)", fontFamily: "monospace" }}>
-        {path}
-      </span>
-    </div>
-  );
-}
-
 // ─── Page ─────────────────────────────────────────────────────────────────────
 export default function AboutPage() {
   return (
@@ -88,7 +52,7 @@ export default function AboutPage() {
                 <span style={{ color: "#C8F135", fontStyle: "italic" }}>Shaping Futures Through<br />Affordable Learning.</span>
               </h1>
               <p style={{ fontSize: "15px", color: "rgba(252,251,247,0.7)", lineHeight: 1.85, marginBottom: "32px", maxWidth: "440px" }}>
-                We believe top-quality tech education should be within everyone's reach — affordable, accessible, and impactful. Our mission is to empower students, freshers, and passionate learners with practical skills to thrive in today's competitive world.
+                We believe top-quality tech education should be within everyone&apos;s reach — affordable, accessible, and impactful. Our mission is to empower students, freshers, and passionate learners with practical skills to thrive in today&apos;s competitive world.
               </p>
               <Link href="/courses" style={{
                 display: "inline-block", padding: "12px 28px", borderRadius: "9px",
@@ -245,8 +209,7 @@ export default function AboutPage() {
             </h2> 
 
             <div className="team-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "28px", maxWidth: "860px" }}>
-              {leadership.map((member, i) => {
-                const palettes = ["#D4E8D0", "#D0DCF0", "#F0E4D0"];
+              {leadership.map((member) => {
                 return (
                   <div
                     key={member.name}
@@ -331,7 +294,7 @@ export default function AboutPage() {
               Your Future Starts Here.
             </h2>
             <p style={{ fontSize: "15px", color: "rgba(252,251,247,0.65)", lineHeight: 1.8, marginBottom: "32px" }}>
-              Join thousands of learners who've transformed their careers with Feather Tech Institute.
+              Join thousands of learners who&apos;ve transformed their careers with Feather Tech Institute.
             </p>
             <div style={{ display: "flex", justifyContent: "center", gap: "12px", flexWrap: "wrap" }}>
               <Link href="/courses" style={{

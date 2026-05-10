@@ -310,7 +310,7 @@ export default function ServicesPage() {
                 Get a Free Consultation
               </p>
               <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 700, color: "#FCFBF7", margin: 0, lineHeight: 1.2 }}>
-                Let's Talk About Your Project
+                Let&apos;s Talk About Your Project
               </h2>
               <p style={{ fontSize: "14px", color: "rgba(252,251,247,0.6)", marginTop: "8px" }}>
                 We are committed to providing prompt and professional support.

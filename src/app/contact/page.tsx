@@ -21,13 +21,7 @@ const contactInfo = [
 //   "Other / Not sure yet",
 // ];
 
-type FormData = {
-  fullName: string;
-  mobile: string;
-  email: string;
-  location: string;
-  message: string;
-};
+
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: "", email: "", phone: "", course: "", message: "" });
