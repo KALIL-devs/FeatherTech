@@ -4,6 +4,9 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { courses } from "@/lib/courses";
 
+// ── API endpoint — set NEXT_PUBLIC_CONTACT_API_URL at build time ──
+const CONTACT_API_URL = process.env.NEXT_PUBLIC_CONTACT_API_URL || '/api/contact.php';
+
 const contactInfo = [
   { icon: "📍", label: "Address", value: "46A, V.P.Sithan Nagar, Vedar Puliyankulam, Thiru Nagar, Madurai - 625006" },
   { icon: "📞", label: "Phone", value: "+91 93618 06594" },
@@ -33,7 +36,7 @@ export default function ContactPage() {
     setLoading(true);
     
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch(CONTACT_API_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
