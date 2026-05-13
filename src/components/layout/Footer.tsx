@@ -56,7 +56,7 @@ export default function Footer() {
             </span>
             <span className="flex flex-col leading-none">
               <span className="font-bold text-base text-[#FCFBF7]" style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}>
-                FeatherTech
+                Feather Tech
               </span>
               <span className="text-[9px] text-[#C8F135] tracking-[1.8px] uppercase mt-0.5">
                 Institute
