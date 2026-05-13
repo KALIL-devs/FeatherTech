@@ -86,7 +86,7 @@ export default function PrivacyPage() {
               <p className="font-bold text-[#1A1A1A] mb-2">Feathertech Institute</p>
               <p className="mb-1">Email: <a href="mailto:feathertechinstitute@gmail.com" className="text-[#1F3D2E] hover:underline">feathertechinstitute@gmail.com</a></p>
               <p className="mb-1">Phone: +91 93618 06594</p>
-              <p>Location: Tamil Nadu, India</p>
+              <p>Address: 46A, V.P.Sithan Nagar, Vedar Puliyankulam, Thiru Nagar, Madurai - 625006</p>
             </div>
           </div>
         </div>

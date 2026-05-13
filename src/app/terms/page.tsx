@@ -93,9 +93,9 @@ export default function TermsPage() {
             <p>For any questions regarding these Terms & Conditions, contact:</p>
             <div className="bg-white p-6 rounded-xl border border-[#E8E4DC] mt-6">
               <p className="font-bold text-[#1A1A1A] mb-2">Feathertech Institute</p>
-              <p className="mb-1">Email: <a href="mailto:info@yourdomain.com" className="text-[#1F3D2E] hover:underline">info@yourdomain.com</a></p>
-              <p className="mb-1">Phone: +91 XXXXX XXXXX</p>
-              <p>Location: Tamil Nadu, India</p>
+              <p className="mb-1">Email: <a href="mailto:feathertechinstitute@gmail.com" className="text-[#1F3D2E] hover:underline">feathertechinstitute@gmail.com</a></p>
+              <p className="mb-1">Phone: +91 93618 06594</p>
+              <p>Address: 46A, V.P.Sithan Nagar, Vedar Puliyankulam, Thiru Nagar, Madurai - 625006</p>
             </div>
           </div>
         </div>
