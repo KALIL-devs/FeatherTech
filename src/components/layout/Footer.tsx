@@ -114,13 +114,16 @@ export default function Footer() {
             © {new Date().getFullYear()} FeatherTech Institute. All rights reserved.
           </p>
           <div className="flex gap-5">
-            {["Privacy Policy", "Terms of Use"].map((label) => (
+            {[
+              { label: "Privacy Policy", href: "/privacy" },
+              { label: "Terms of Use", href: "/terms" },
+            ].map((link) => (
               <Link
-                key={label}
-                href="#"
+                key={link.label}
+                href={link.href}
                 className="text-[12px] text-[rgba(252,251,247,0.4)] no-underline transition-colors duration-150 hover:text-[rgba(252,251,247,0.75)]"
               >
-                {label}
+                {link.label}
               </Link>
             ))}
           </div>
