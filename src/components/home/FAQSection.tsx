@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { ChevronDown, HelpCircle } from 'lucide-react';
+import Link from 'next/link';
 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
