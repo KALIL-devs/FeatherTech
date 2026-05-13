@@ -67,7 +67,7 @@ export default function Navbar() {
               marginLeft: "10px",
             }}
           >
-            FeatherTech
+            Feather Tech Institute
           </span>
         </Link>
 
