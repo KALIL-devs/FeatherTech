@@ -77,20 +77,20 @@ const WhyChooseUs = () => {
               </div>
             </div>
 
-{/* Right: Feature Points */}
-<div className="lg:col-span-7 bg-white rounded-[2rem] p-4 md:p-4 grid grid-cols-1 md:grid-cols-2 gap-3 shadow-2xl relative overflow-hidden">
-  <div className="absolute top-0 right-0 w-64 h-64 bg-[#D2FF3A]/20 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none" />
-
-  {points.map((item, idx) => (
-    <div key={idx} className="relative z-10 bg-[#1F3D2E] rounded-2xl p-6 flex flex-col items-start">
-      <div className="bg-[#2d5a40] p-3 rounded-xl mb-4 shadow-sm">
-        {item.icon}
-      </div>
-      <h4 className="text-white text-xl font-bold mb-2">{item.title}</h4>
-      <p className="text-white/60 text-sm leading-relaxed">{item.description}</p>
-    </div>
-  ))}
-</div>
+            {/* Right: Feature Points */}
+            <div className="lg:col-span-7 bg-white rounded-[2rem] p-4 md:p-4 grid grid-cols-1 md:grid-cols-2 gap-3 shadow-2xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-[#D2FF3A]/20 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none" />
+            
+              {points.map((item, idx) => (
+                <div key={idx} className="relative z-10 bg-[#1F3D2E] rounded-2xl p-6 flex flex-col items-start">
+                  <div className="bg-[#2d5a40] p-3 rounded-xl mb-4 shadow-sm">
+                    {item.icon}
+                  </div>
+                  <h4 className="text-white text-xl font-bold mb-2">{item.title}</h4>
+                  <p className="text-white/60 text-sm leading-relaxed">{item.description}</p>
+                </div>
+              ))}
+            </div>
 
           </div>
         </div>
