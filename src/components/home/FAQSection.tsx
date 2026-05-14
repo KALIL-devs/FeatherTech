@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { ChevronDown, HelpCircle } from 'lucide-react';
+import Link from 'next/link';
 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -95,9 +96,12 @@ const FAQSection = () => {
             <p className="text-white/70 text-[14px] mb-6">
               Can&apos;t find the answer you&apos;re looking for? Please chat to our friendly team.
             </p>
-            <button className="bg-[#C8F135] text-[#1F3D2E] px-8 py-3 rounded-full text-sm font-bold hover:bg-white transition-colors">
-              Get in Touch
-            </button>
+              <Link
+                href="/contact"
+                className="inline-block bg-[#C8F135] text-[#1F3D2E] px-8 py-3 rounded-full text-sm font-bold hover:bg-white transition-colors"
+              >
+                Get in Touch
+              </Link>
           </div>
           <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16 blur-2xl pointer-events-none" />
         </div>
